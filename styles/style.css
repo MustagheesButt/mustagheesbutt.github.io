@@ -1,5 +1,21 @@
 body {
 	margin: 0;
+	font-family: Roboto;
+}
+nav {
+	padding: 0.7%;
+	position: fixed;
+	top: 2%;
+	right: 2%;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+nav span {
+	width: 25px;
+	height: 5px;
+	background-color: black;
+	display: block;
+	margin: 5px;
 }
 header {
 	height: 100vh;
@@ -18,7 +34,6 @@ header .face {
 	margin: 15% auto 1% auto;
 }
 header .description {
-	font-family: Roboto;
 	font-size: 32px;
 	font-weight: 300;
 }
