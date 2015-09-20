@@ -1,3 +1,19 @@
+body {
+	margin: 0;
+}
 header {
-	
+	height: 100vh;
+	text-align: center;
+	background-image: url("../images/cover.jpg");
+	background-size: cover;
+	overflow: hidden;
+}
+header .face {
+	width: 20%;
+	height: 30%;
+	background-image: url("../images/face.jpg");
+	background-size: cover;
+	background-position-x: -50px;
+	border-radius: 50%;
+	margin: 15% auto 1% auto;
 }
