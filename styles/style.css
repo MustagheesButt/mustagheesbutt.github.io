@@ -17,3 +17,8 @@ header .face {
 	border-radius: 50%;
 	margin: 15% auto 1% auto;
 }
+header .description {
+	font-family: Roboto;
+	font-size: 32px;
+	font-weight: 300;
+}
