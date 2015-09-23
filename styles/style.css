@@ -7,7 +7,9 @@ body.menu-open {
 	overflow-y: hidden;
 }
 body.menu-open nav {
-	padding: 0.5% 1%;
+	background-color: transparent;
+	margin-top: -0.5%;
+	margin-left: -0.5%;
 }
 body.menu-open nav span {
 	display: none;
@@ -18,6 +20,10 @@ body.menu-open nav .close {
 body.menu-open #menu {
 	right: 0;
 } 
+body.menu-open #menu ul {
+	height: 100%;
+	padding-top: 5%;
+}
 nav {
 	padding: 0.7%;
 	position: fixed;
@@ -40,9 +46,10 @@ nav, nav span {
 nav .close {
 	display: none;
 	font-size: 36px;
+	color: white;
 }
 nav:hover .close {
-	color: white;
+	color: red;
 }
 nav:hover {
 	background-color: rgba(0, 0, 0, 0.8);
@@ -56,15 +63,23 @@ nav:hover span {
     width: 100%;
 	height: 100%;
 	right: -2000px;
-	transition: 0.5s linear;
+	transition: 0.4s linear 0.5s;
+}
+.menu-open #menu {
+	transition: 0.4s linear;
 }
 #menu ul {
 	width: 25%;
-	height: 100%;
+	height: 0px;
 	margin-top: 0;
 	padding-left: 0;
-	padding-top: 5%;
+	padding-top: 0;
 	background-color: #6495ED;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.menu-open #menu ul {
+	transition: 0.5s 0.4s;
 }
 #menu ul li {
 	color: aliceblue;
@@ -72,10 +87,24 @@ nav:hover span {
 	font-size: 36px;
 	font-weight: 600;
 	padding-left: 7%;
-	transition: 0.3s;
+	transition: 0.4s;
 }
-#menu ul li:hover {
+#menu ul li:first-child:hover {
 	background-color: rgba(255, 0, 0, 0.5);
+}
+#menu ul li:last-child:hover {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+#menu ul li a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+#menu.red {
+	background-color: rgba(255, 0, 0, 0.3);
+}
+#menu.green {
+	background-color: rgba(0, 255, 0, 0.3);
 }
 header {
 	height: 100vh;
