@@ -1,11 +1,5 @@
 $(document).ready(function () {
 	
-	// nav menu controller
-	$("nav").click(function () {
-		$("body").animate({scrollTop: "0px"}, 300);
-		$("body").toggleClass("menu-open");
-	});
-	
 	// nav menu item hover animation
 	$("#menu ul li:first-child").mouseover(function () {
 		$("#menu").addClass("red");
@@ -19,4 +13,5 @@ $(document).ready(function () {
 	$("#menu ul li:last-child").mouseleave(function () {
 		$("#menu").removeClass("green");
 	});
+	
 }); 
