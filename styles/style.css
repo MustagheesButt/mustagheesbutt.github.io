@@ -1,7 +1,31 @@
+@font-face {
+	font-family: "Myraid Pro";
+	src: url("../fonts/myriad.ttf");
+}
 body {
 	margin: 0;
 	font-family: Roboto;
 }
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #D2527F;
+  margin: 1.5em 10px;
+  padding: 1em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/*  CUSTOM COMPONENTS */
 #menu {
 	background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -27,7 +51,7 @@ body {
 	transition: 0.4s;
 }
 #menu ul li:hover {
-	background-color: green;
+	background-color: rgba(239, 72, 54, 0.5);
 }
 #menu ul li a {
 	display: block;
@@ -60,13 +84,8 @@ header .description {
 #about h1 {
 	text-align: center;
 }
-#about .about-close {
-	display: inline-block;
-	font-size: 24px;
-	cursor: pointer;
-	margin: 0 50%;
-	padding: 0.5% 0.9%;
-	border-radius: 50%;
-	color: black;
-	background-color: rgba(255, 255, 255, 0.8);
+#about .intro {
+	font-family: Myraid Pro;
+	font-size: 20px;
+	text-align: center;
 }
