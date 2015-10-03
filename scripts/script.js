@@ -12,4 +12,9 @@ $(document).ready(function () {
 	    }, 900, 'swing');
 	});
 	
+	// insert &#215 in .block-false
+	$(".block-false").html("&#215;");
+	// insert &#10003 in .block-true
+	$(".block-true").html("&#10003;");
+	
 }); 
