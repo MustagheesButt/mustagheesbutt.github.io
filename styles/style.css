@@ -81,10 +81,10 @@ header .description {
 	top: 30%;
 	margin-left: 7%;
 }
-#about {
+body > main > div {
 	padding: 5px;
 }
-#about h1 {
+#about h1, #portfolio h1, #contact h1 {
 	text-align: center;
 }
 #about .intro {

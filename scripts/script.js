@@ -17,4 +17,23 @@ $(document).ready(function () {
 	// insert &#10003 in .block-true
 	$(".block-true").html("&#10003;");
 	
+	(function($) {
+    
+     var allPanels = $('main > div > main').hide();
+     
+     $('main > div > h1').click(function() {
+		 
+		 if ( !$(this).parent().hasClass("active") ) {
+			$("main > div").removeClass("active");
+			
+			$(this).parent().addClass("active");
+			allPanels.slideUp(); 
+		 }
+		 
+		 $(this).parent().children("main").slideDown();
+		 return false;
+     });
+
+    }) (jQuery);
+	
 }); 
