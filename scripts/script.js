@@ -36,4 +36,20 @@ $(document).ready(function () {
 
     }) (jQuery);
 	
+	/*  VIEW CONTROLLER - CONTROLES TOGGLING BETWEEN Table View & Graph View */
+	$(".view span:first-child").click(function () {
+		$(".view-table").css("display", "block");
+		$(".view-graph").css("display", "none");
+		
+		$(this).addClass("active");
+		$(".view span:last-child").removeClass("active");
+	});
+	$(".view span:last-child").click(function () {
+		$(".view-graph").css("display", "block");
+		$(".view-table").css("display", "none");
+		
+		$(this).addClass("active");
+		$(".view span:first-child").removeClass("active");
+	});
+	
 }); 

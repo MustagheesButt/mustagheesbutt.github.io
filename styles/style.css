@@ -158,6 +158,9 @@ div.view span:hover {
 	background-color: rgba(30, 237, 63, 0.8);
 	color: #1000FF;
 }
+.view-graph {
+	display: none;
+}
 #contact main h4 {
 	background-color: aliceblue;
 	padding: 5px 25px;
