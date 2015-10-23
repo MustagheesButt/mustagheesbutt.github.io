@@ -161,6 +161,9 @@ div.view span:hover {
 .view-graph {
 	display: none;
 }
+.view-graph .graph {
+	text-align: center;
+}
 #contact main h4 {
 	background-color: aliceblue;
 	padding: 5px 25px;
