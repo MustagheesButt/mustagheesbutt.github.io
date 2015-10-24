@@ -79,7 +79,7 @@ a:hover {
 header {
 	height: 100vh;
 	position: relative;
-	background-image: url("../images/cover.jpg");
+	background-image: url("../images/cover-2.jpg");
 	background-size: cover;
 	overflow: hidden;
 }
@@ -163,6 +163,9 @@ div.view span:hover {
 }
 .view-graph .graph {
 	text-align: center;
+}
+.view-graph .graph svg {
+	width: 100% !important;
 }
 #contact main h4 {
 	background-color: aliceblue;

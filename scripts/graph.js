@@ -35,7 +35,11 @@ var dataset = [dataSkills, dataKnows, dataEnvs, dataTools];
 var width = 360;
 var height = 360;
 var radius = Math.min(width, height) / 2;
-var color = d3.scale.category20b();
+
+var color = d3.scale.category10();
+
+var legendRectSize = 18;
+var legendSpacing = 4;
 
 $(document).ready(function () {
 	
@@ -44,7 +48,8 @@ $(document).ready(function () {
 	divEnvs = d3.select(".view-graph section:nth-child(3) .graph"),
 	divTools = d3.select(".view-graph section:last-child .graph");
 	var divs = [divSkills, divKnows, divEnvs, divTools];
-		  
+	var legends = [".legend-1", ".legend-2", ".legend-3", ".legend-4"]
+	
 	var arc = d3.svg.arc()
 		  .outerRadius(radius);
 	var pie = d3.layout.pie()
@@ -59,13 +64,37 @@ $(document).ready(function () {
 			  .append('g')
 			  .attr('transform', 'translate(' + (width / 2) +  ',' + (height / 2) + ')');
 		var path = svg.selectAll('path')
-			  .data(pie( dataset[i]) )
+			  .data( pie(dataset[i]) )
 			  .enter()
 			  .append('path')
 			  .attr('d', arc)
 			  .attr('fill', function(d, i) { 
 				return color(d.data.label);
 		});
+		console.log( color.domain() )
+		var legend = svg.selectAll('.legend')
+			  .data( color.domain() )
+			  .enter()
+			  .append('g')
+			  .attr('class', legends[i])
+			  .attr('transform', function(d, j) {
+				var height = legendRectSize + legendSpacing;
+				var offset =  height * color.domain().length / 2;
+				var horz = 15 * legendRectSize;
+				var vert = j * height - offset;
+				return 'translate(' + horz + ',' + vert + ')';
+			  });
+		legend.append('rect')
+			  .attr('width', legendRectSize)
+			  .attr('height', legendRectSize)
+			  .style('fill', color)
+			  .style('stroke', color);
+		legend.append('text')
+			  .attr('x', legendRectSize + legendSpacing)
+			  .attr('y', legendRectSize - legendSpacing)
+			  .text(function(d) { return d; });
+			  
+		color.domain(0);
 	}
 
 });
