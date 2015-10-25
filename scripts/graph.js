@@ -71,15 +71,19 @@ $(document).ready(function () {
 			  .attr('fill', function(d, i) { 
 				return color(d.data.label);
 		});
-		console.log( color.domain() )
+		
+		// Domain starts to increase on each iteration, so instead of color.domain() we use pieLabels 
+		var pieLabels = dataset[i].map(function (d) {
+			  return d.label;
+		});
 		var legend = svg.selectAll('.legend')
-			  .data( color.domain() )
+			  .data( pieLabels )
 			  .enter()
 			  .append('g')
 			  .attr('class', legends[i])
 			  .attr('transform', function(d, j) {
 				var height = legendRectSize + legendSpacing;
-				var offset =  height * color.domain().length / 2;
+				var offset =  height * pieLabels.length / 2;
 				var horz = 15 * legendRectSize;
 				var vert = j * height - offset;
 				return 'translate(' + horz + ',' + vert + ')';
@@ -93,8 +97,6 @@ $(document).ready(function () {
 			  .attr('x', legendRectSize + legendSpacing)
 			  .attr('y', legendRectSize - legendSpacing)
 			  .text(function(d) { return d; });
-			  
-		color.domain(0);
 	}
 
 });
