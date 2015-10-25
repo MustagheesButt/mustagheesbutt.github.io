@@ -34,6 +34,14 @@ var dataset = [dataSkills, dataKnows, dataEnvs, dataTools];
 
 var width = 360;
 var height = 360;
+// Make height and width of graph responsive
+if (window.innerWidth <= 320) {
+	width = 100;
+	height = 100;
+} else if (window.innerWidth <= 480) {
+	width = 200;
+	height = 200;
+}
 var radius = Math.min(width, height) / 2;
 
 var color = d3.scale.category10();
@@ -84,7 +92,7 @@ $(document).ready(function () {
 			  .attr('transform', function(d, j) {
 				var height = legendRectSize + legendSpacing;
 				var offset =  height * pieLabels.length / 2;
-				var horz = 15 * legendRectSize;
+				var horz = width;
 				var vert = j * height - offset;
 				return 'translate(' + horz + ',' + vert + ')';
 			  });

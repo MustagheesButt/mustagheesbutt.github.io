@@ -1,0 +1,9 @@
+@media (max-width: 320px) {
+	header {
+		background-image: url("../images/cover-small.jpg") !important;
+	}
+	#menu ul li {
+		font-size: 22px !important;
+		padding-top: 12% !important;
+	}
+}

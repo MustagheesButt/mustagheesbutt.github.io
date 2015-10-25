@@ -1,7 +1,9 @@
+@import url("responsive.css");
 @font-face {
 	font-family: "Myraid Pro";
 	src: url("../fonts/myriad.ttf");
 }
+
 body {
 	margin: 0;
 	font-family: Roboto;
@@ -79,8 +81,9 @@ a:hover {
 header {
 	height: 100vh;
 	position: relative;
-	background-image: url("../images/cover-2.jpg");
+	background-image: url("../images/cover-normal.jpg");
 	background-size: cover;
+	background-position: center center;
 	overflow: hidden;
 }
 header .description {
