@@ -44,40 +44,6 @@ a:hover {
 }
 
 /*  CUSTOM COMPONENTS */
-#menu {
-	background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-	height: 15%;
-	position: absolute;
-	bottom: 0;
-}
-#menu ul {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow: hidden;
-}
-#menu ul li {
-	width: 33.3%;
-	height: 100%;
-	text-align: center;
-	color: aliceblue;
-	list-style: none;
-	display: inline-block;
-	margin: 0;
-	padding-top: 3%;
-	font-size: 36px;
-	font-weight: 600;
-	transition: 0.4s;
-}
-#menu ul li:hover {
-	background-color: rgba(137, 37, 81, 0.6);
-}
-#menu ul li a {
-	display: block;
-	text-decoration: none;
-	color: inherit;
-}
 header {
 	height: 100vh;
 	position: relative;

@@ -1,9 +1,28 @@
 @media (max-width: 320px) {
-	header {
-		background-image: url("../images/cover-small.jpg") !important;
-	}
 	#menu ul li {
 		font-size: 22px !important;
 		padding-top: 12% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	
+}
+
+@media (max-width: 640px) {
+	
+}
+
+@media (max-width: 960px) {
+	
+}
+
+@media (max-width: 1280px) {
+	
+}
+
+@media (orientation: portrait) {
+	header {
+		background-image: url("../images/cover-small.jpg") !important;
 	}
 }
