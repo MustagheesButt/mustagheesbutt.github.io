@@ -35,13 +35,8 @@ var dataset = [dataSkills, dataKnows, dataEnvs, dataTools];
 var width = 360;
 var height = 360;
 // Make height and width of graph responsive
-if (window.innerWidth <= 320) {
-	width = 100;
-	height = 100;
-} else if (window.innerWidth <= 480) {
-	width = 200;
-	height = 200;
-}
+width = (window.innerWidth * 30) / 100; // makes width 30% of innerWidth
+height = width;
 var radius = Math.min(width, height) / 2;
 
 var color = d3.scale.category10();
