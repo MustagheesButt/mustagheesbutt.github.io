@@ -53,11 +53,17 @@ header {
 	overflow: hidden;
 }
 header .description {
+	width: 55%;
 	font-size: 42px;
 	font-weight: 300;
 	position: relative;
 	top: 30%;
 	margin-left: 7%;
+}
+header .description span {
+	display: block;
+	font-size: 24px;
+	color: #2F2F2F;
 }
 body > main > div {
 	padding: 5px;
@@ -72,11 +78,20 @@ body > main > div > h1:hover, body > main > div.active > h1 {
 	border-bottom: 2px solid rgb(179, 6, 82);
 }
 #about h1, #portfolio h1, #contact h1 {
+	position: relative;
 	margin: 0;
 	padding: 21px 0;
 	background-color: aliceblue;
 	text-align: center;
 	cursor: pointer;
+}
+#about h1 span, #portfolio h1 span, #contact h1 span {
+	position: absolute;
+	left: 45px;
+	transition: 0.5s;
+}
+#about.active h1 span, #portfolio.active h1 span, #contact.active h1 span {
+	transform: rotate(90deg);
 }
 #about .intro {
 	font-family: Myraid Pro;
@@ -93,18 +108,18 @@ body > main > div > h1:hover, body > main > div.active > h1 {
 div.view div {
 	display: inline-block;
 }
-div.view span {
+div.view div > span {
 	color: blue;
 	background-color: white;
 	border: 1px solid blue;
 	padding: 3px;
 	transition: 0.5s;
 }
-div.view span:first-child {
+div.view div > span:first-child {
 	border-top-left-radius: 35%;
     border-bottom-left-radius: 35%;
 }
-div.view span:last-child {
+div.view div > span:last-child {
 	border-top-right-radius: 35%;
     border-bottom-right-radius: 35%;
 }
