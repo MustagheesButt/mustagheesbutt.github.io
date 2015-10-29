@@ -1,7 +1,7 @@
 @media (max-width: 320px) {
 	#menu ul li {
-		font-size: 22px !important;
-		padding-top: 12% !important;
+		font-size: 22px;
+		padding-top: 12%;
 	}
 }
 
@@ -23,6 +23,19 @@
 
 @media (orientation: portrait) {
 	header {
-		background-image: url("../images/cover-small.jpg") !important;
+		background-image: url("../images/cover-small.jpg");
+	}
+	header .description {
+		background-color: rgba(255, 255, 255, 0.3);
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		margin-left: 0;
+		padding: 10px;
+		font-size: 24px;
+		text-align: center;
+	}
+	header .description span {
+		font-size: 16px;
 	}
 }
