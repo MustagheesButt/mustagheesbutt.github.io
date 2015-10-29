@@ -66,6 +66,13 @@ header .description span {
 	font-size: 24px;
 	color: #2F2F2F;
 }
+header .scroll-down {
+	position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+	text-align: center;
+}
 header .description-404 {
 	margin-top: 5%;
 	margin-left: 7%;
