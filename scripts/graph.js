@@ -17,9 +17,9 @@ var dataKnows = [
   { label: 'C', count: 75 }
 ];
 var dataEnvs = [
-  { label: 'Adobe Dreamweaver', count: 75 }, 
-  { label: 'SublimeText', count: 80 },
-  { label: 'Notepad++', count: 80 },
+  { label: 'Adobe Dreamweaver', count: 78 }, 
+  { label: 'SublimeText', count: 87 },
+  { label: 'Notepad++', count: 83 },
   { label: 'Cloud9 (Online IDE)', count: 80 }
 ];
 var dataTools = [
