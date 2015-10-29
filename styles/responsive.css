@@ -26,16 +26,28 @@
 		background-image: url("../images/cover-small.jpg");
 	}
 	header .description {
-		background-color: rgba(255, 255, 255, 0.3);
+		background-color: rgba(0, 0, 0, 0.7);
+		color: #FFFFFF;
 		width: 100%;
-		position: absolute;
-		bottom: 0;
+		height: 100%;
+		margin-top: 0;
 		margin-left: 0;
-		padding: 10px;
+		padding: 20px 0;
 		font-size: 24px;
 		text-align: center;
 	}
+	header .description .responsive-image {
+		background-image: url("../images/cover-small.jpg");
+		background-size: cover;
+		background-position: center center;
+		width: 50%;
+		height: 30%;
+		display: block;
+		margin: 20% auto;
+		border-radius: 50%;
+	}
 	header .description span {
 		font-size: 16px;
+		color: #E2E2E2;
 	}
 }

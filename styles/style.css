@@ -58,6 +58,9 @@ header .description {
 	margin-top: 20%;
 	margin-left: 7%;
 }
+header .description .responsive-image {
+	display: none;
+}
 header .description span {
 	display: block;
 	font-size: 24px;
