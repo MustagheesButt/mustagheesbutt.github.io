@@ -182,7 +182,7 @@ div.view span:hover {
 }
 #portfolio main .item {
 	width: 32%;
-	height: 250px;
+	height: 100%;
 	display: inline-block;
 	margin-right: 1.3%;
 }
