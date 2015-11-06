@@ -1,14 +1,9 @@
 $(document).ready(function () {
 	
 	// Inertial scrolling
-	$('a[href^="#"]').on('click', function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash;
-	    var $target = $(target);
-
+	$('#contact h1, .scroll-down').on('click', function (e) {
 	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
+	        'scrollTop': e.target.offsetTop
 	    }, 900, 'swing');
 	});
 	
@@ -61,16 +56,36 @@ $(document).ready(function () {
 		var des = $("#portfolio main .design");
 		dataArr.forEach(function (element, index, array) {
 			if (element.category == "dev") {
-				dev.append("<div class='item'><img class='item-thumb' src=' " + element.thumbnail + 
-				" ' /><h3>" + element.title + 
-				"</h3><h5>Type: " + element.type + 
-				"</h5><p>" + element.description + "</p></div>");
+				dev.append("<div class='item'><div class='item-thumb' style='background-image: url(" + element.thumbnail + 
+				"); '><div class='details'>SEE DETAILS</div></div><h3><span class='title'>" + element.title + 
+				"</span><a href=' " + element.link + " '><span class='fa fa-link'></span></a></h3></div>");
 			} else if (element.category == "des") {
-				des.append("<div class='item'><img class='item-thumb' src=' " + element.thumbnail + 
-				" ' /><h3>" + element.title + 
-				"</h3><h5>Type: " + element.type +
-				"</h5><p>" + element.description + "</p></div>");
+				des.append("<div class='item'><div class='item-thumb' style='background-image: url(" + element.thumbnail + 
+				"); '><div class='details'>SEE DETAILS</div></div><h3><span class='title'>" + element.title + 
+				"</span><a href=' " + element.link + " '><span class='fa fa-link'></span></a></h3></div>");
 			}
+		});
+		
+		/* PORTFOLIO DETAILS HANDLER */
+		$("div.details").on("click", function () {
+			// search for element in dataArr with same title
+			var currEle = $(this).parent().parent().children("h3").children(".title").html();
+			var ele;
+			for (var i = 0; i < dataArr.length; i++) {
+				if (dataArr[i].title == currEle) {
+					ele = dataArr[i];
+					break;
+				}
+			}
+			
+			$(".details-box img").attr("src", ele.thumbnail);
+			$(".details-box .details-box-title span").html(ele.title);
+			$(".details-box .details-box-type span").html(ele.type);
+			$(".details-box .details-box-description").html(ele.description);
+			$(".details-box").addClass("active");
+		});
+		$(".details-box .fa-close").on("click", function () {
+			$(".details-box").removeClass("active");
 		});
 	})
 	.fail(function () {
