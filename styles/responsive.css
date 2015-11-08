@@ -1,8 +1,12 @@
-@media (max-width: 320px) {
-	#menu ul li {
-		font-size: 22px;
-		padding-top: 12%;
-	}
+@media (max-width: 1280px) {
+	
+}
+
+@media (max-width: 960px) {
+	
+}
+@media (max-width: 640px) {
+	
 }
 
 @media (max-width: 480px) {
@@ -12,18 +16,22 @@
 		display: inline-block;
 		margin-right: 1.3%;
 	}
+	#portfolio main .item-thumb .details {
+		padding-top: 25%;
+	}
+	#portfolio main .details-box > div {
+		width: 97%;
+		margin-left: 0;
+	}
+	#portfolio main .details-box .fa-close {
+		top: -2%;
+	}
 }
 
-@media (max-width: 640px) {
-	
-}
-
-@media (max-width: 960px) {
-	
-}
-
-@media (max-width: 1280px) {
-	
+@media (max-width: 320px) {
+	#portfolio main .item-thumb .details {
+		padding-top: 30%;
+	}
 }
 
 @media (orientation: portrait) and (max-width: 480px) {

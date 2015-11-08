@@ -13,7 +13,7 @@
 	"type": "blog",
 	"category": "dev",
 	"description": "A blog site featuring technical articles, how-to guides and more.",
-	"link": "http://www.hubover.com"
+	"link": "http://www.rustedbyte.blogspot.com"
 },
 {
 	"title": "Rusted Byte",
@@ -21,15 +21,15 @@
 	"type": "blog",
 	"category": "dev",
 	"description": "A blog site featuring technical articles, how-to guides and more.",
-	"link": "http://www.hubover.com"
+	"link": "http://www.rustedbyte.blogspot.com"
 },
 {
-	"title": "Hassaan's Photography Logo",
+	"title": "Hassaan's Photography",
 	"thumbnail": "./images/portfolio/hassan-logo.png",
 	"type": "logo",
 	"category": "des",
 	"description": "A logo designed for Hassaan's Photography, a photographer's Facebook page.",
-	"link": "http://www.hubover.com"
+	"link": "https://www.behance.net/gallery/27852527/Logo-for-Hassans-Photography"
 },
 {
 	"title": "Fox with Kit",
@@ -37,6 +37,6 @@
 	"type": "image manipulation",
 	"category": "des",
 	"description": "A Photoshop manipulation featuring a fox with her kit and a majestic moon.",
-	"link": "http://www.hubover.com"
+	"link": "https://www.behance.net/gallery/24274701/Mother-fox-with-her-Kit"
 }
 ]

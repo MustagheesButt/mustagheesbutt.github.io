@@ -186,6 +186,7 @@ div.view span:hover {
 	height: 100%;
 	display: inline-block;
 	margin-right: 1.3%;
+	float: left;
 }
 #portfolio main .item-thumb {
 	width: 100%;
@@ -250,6 +251,15 @@ div.view span:hover {
 #portfolio main .item .fa-link {
 	float: right;
 	margin-right: 5px;
+}
+/* CLEAR FIX FOR FLOATING ITEMS*/
+#portfolio main .design:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 #contact main h4 {
 	background-color: aliceblue;
