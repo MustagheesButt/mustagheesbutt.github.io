@@ -1,0 +1,37 @@
+[
+{
+	"title": "Hubover",
+	"thumbnail": "./images/portfolio/hubover.png",
+	"type": "blog",
+	"category": "dev",
+	"description": "A blog type website where any registered user can post articles of his/her interest."
+},
+{
+	"title": "Rusted Byte",
+	"thumbnail": "./images/portfolio/rb.png",
+	"type": "blog",
+	"category": "dev",
+	"description": "A blog site featuring technical articles, how-to guides and more."
+},
+{
+	"title": "Rusted Byte",
+	"thumbnail": "./images/portfolio/rb.png",
+	"type": "blog",
+	"category": "dev",
+	"description": "A blog site featuring technical articles, how-to guides and more."
+},
+{
+	"title": "Hassaan's Photography Logo",
+	"thumbnail": "./images/portfolio/hassan-logo.png",
+	"type": "logo",
+	"category": "des",
+	"description": "A logo designed for Hassaan's Photography, a photographer's Facebook page."
+},
+{
+	"title": "Fox with Kit",
+	"thumbnail": "./images/portfolio/fox-moon.jpg",
+	"type": "image manipulation",
+	"category": "des",
+	"description": "A Photoshop manipulation featuring a fox with her kit and a majestic moon."
+}
+]

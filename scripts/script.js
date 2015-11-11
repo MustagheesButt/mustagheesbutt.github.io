@@ -52,4 +52,29 @@ $(document).ready(function () {
 		$(".view span:first-child").removeClass("active");
 	});
 	
+	/* ADD PORTFOLIO ITEMS - VIA portfolio.json */
+	var dataArr = $.getJSON("portfolio.json")
+	.done(function (dataArr) {
+		console.log("Portfolio data loaded successfully.");
+		
+		var dev = $("#portfolio main .development");
+		var des = $("#portfolio main .design");
+		dataArr.forEach(function (element, index, array) {
+			if (element.category == "dev") {
+				dev.append("<div class='item'><img class='item-thumb' src=' " + element.thumbnail + 
+				" ' /><h3>" + element.title + 
+				"</h3><h5>Type: " + element.type + 
+				"</h5><p>" + element.description + "</p></div>");
+			} else if (element.category == "des") {
+				des.append("<div class='item'><img class='item-thumb' src=' " + element.thumbnail + 
+				" ' /><h3>" + element.title + 
+				"</h3><h5>Type: " + element.type +
+				"</h5><p>" + element.description + "</p></div>");
+			}
+		});
+	})
+	.fail(function () {
+		console.log("Portfolio data failed to load.");
+	});
+	
 }); 

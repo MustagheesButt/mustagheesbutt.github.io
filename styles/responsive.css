@@ -41,9 +41,11 @@
 		background-size: cover;
 		background-position: center center;
 		width: 50%;
-		height: 30%;
+		height: auto;
 		display: block;
 		margin: 20% auto;
+		/* PADDING-TOP to be same as width, so its a perfect responsive circle*/
+		padding-top: 50%;
 		border-radius: 50%;
 	}
 	header .description span {
