@@ -271,6 +271,38 @@ div.view span:hover {
 #contact main h4:hover {
 	background-color: #CCE3F7;
 }
+#contact form input, textarea {
+	font-family: Roboto;
+	font-size: 16px;
+	padding: 0.5%;
+	width: 30%;
+	transition: 0.5s;
+}
+#contact form input {
+	border: none;
+	border-bottom: 2px solid black;
+}
+#contact form input:focus {
+	border-bottom: 2px solid brown;
+}
+#contact textarea {
+	resize: none;
+	border: none;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+}
+#contact form button {
+	font-size: 16px;
+	font-weight: 600;
+    border: 2px solid transparent;
+    background: none;
+	color: #B30652;
+    text-transform: uppercase;
+	transition: 0.5s;
+}
+#contact form button:hover {
+	border-bottom: 2px solid #B30652;
+}
 
 /*
  * SOCIAL ICONS - CSS
