@@ -97,7 +97,7 @@ $(document).ready(function () {
 	$("#contact form").submit(function (e) {
 		e.preventDefault();
 		if (submitBtn.html() != "SENT") {
-			submitBtn.html("Sending...").css({"background-color": "yellow", "color": "black");
+			submitBtn.html("Sending...").css({"background-color": "yellow", "color": "black"});
 			
 			$.ajax({
 				url: "//formspree.io/mustaghees99@live.com",
