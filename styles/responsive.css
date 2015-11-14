@@ -29,6 +29,9 @@
 	#contact form input, textarea {
 		width: 90%;
 	}
+	.soc {
+		padding: 20px 9%;
+	}
 }
 
 @media (max-width: 320px) {

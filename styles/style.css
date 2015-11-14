@@ -307,6 +307,11 @@ div.view span:hover {
 	background-color: #B30652;
 	color: #FFFFFF;
 }
+#contact .prof-icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
 
 /*
  * SOCIAL ICONS - CSS
@@ -333,7 +338,7 @@ div.view span:hover {
 .soc {
     overflow: hidden;
     margin: 0;
-	padding: 20px 35%;
+	padding: 20px 18%;
     list-style: none;
 }
 
