@@ -291,6 +291,7 @@ div.view span:hover {
 }
 #contact form input:focus, #contact textarea:focus {
 	border-bottom: 2px solid brown;
+	outline: none;
 }
 #contact form button {
 	font-size: 16px;

@@ -93,22 +93,31 @@ $(document).ready(function () {
 	});
 	
 	/* EMAIL HANDLER - CONTACT FORM */
+	var submitBtn = $("button[type='submit']");
 	$("#contact form").submit(function (e) {
 		e.preventDefault();
-		$.ajax({
-			url: "//formspree.io/mustaghees99@live.com",
-			method: "POST",
-			data : {
-				Name: $("#contact form input[name='name']").val(),
-				Email: $("#contact form input[name='_repyto']").val(),
-				Subject: $("#contact form input[name='_subject']").val(), 
-				Message: $("#contact form textarea").val()
-			},
-			dataType: "json"
-		})
-		.done(function ( response ) {
-			console.log(response);
-		});
+		if (submitBtn.html() == "Sent") {
+			submitBtn.html("Sending...").css("background-color", "yellow");
+			
+			$.ajax({
+				url: "//formspree.io/mustaghees99@live.com",
+				method: "POST",
+				data : {
+					Name: $("#contact form input[name='name']").val(),
+					Email: $("#contact form input[name='email']").val(),
+					Subject: $("#contact form input[name='_subject']").val(),
+					_subject: $("#contact form input[name='_subject']").val(),
+					Message: $("#contact form textarea").val()
+				},
+				dataType: "json"
+			})
+			.done(function ( response ) {
+				console.log(response.success);
+				submitBtn.html("Sent").css("background-color", "#1BB71B");
+			});
+		} else {
+			console.log("already sent an email");
+		}
 	});
 	
 }); 
