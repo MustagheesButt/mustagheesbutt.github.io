@@ -96,7 +96,7 @@ $(document).ready(function () {
 	var submitBtn = $("button[type='submit']");
 	$("#contact form").submit(function (e) {
 		e.preventDefault();
-		if (submitBtn.html() != "SENT") {
+		if (submitBtn.html() != "sent") {
 			submitBtn.html("Sending...").css({"background-color": "yellow", "color": "black"});
 			
 			$.ajax({
