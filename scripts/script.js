@@ -113,7 +113,7 @@ $(document).ready(function () {
 			})
 			.done(function ( response ) {
 				console.log(response.success);
-				submitBtn.html("sent").css({"background-color": "#1BB71B", "color": "#FFFFFF");
+				submitBtn.html("sent").css({"background-color": "#1BB71B", "color": "#FFFFFF"});
 			});
 		} else {
 			console.log("already sent an email");
