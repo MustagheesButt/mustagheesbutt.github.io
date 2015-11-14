@@ -26,6 +26,9 @@
 	#portfolio main .details-box .fa-close {
 		top: -2%;
 	}
+	#contact form input, textarea {
+		width: 90%;
+	}
 }
 
 @media (max-width: 320px) {

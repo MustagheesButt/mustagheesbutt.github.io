@@ -92,4 +92,19 @@ $(document).ready(function () {
 		console.log("Portfolio data failed to load.");
 	});
 	
+	/* EMAIL HANDLER - CONTACT FORM */
+	$("#contact form").submit(function (e) {
+		e.preventDefault();
+		$.ajax({
+			url: "//formspree.io/mustaghees99@live.com",
+			method: "POST",
+			data : { subject: $("#contact form input[name='_subject']").val(), 
+						message: "<h2>Sent by:</h2>" + $("#contact form input[name='name']").val() + "<h2>Message: </h2>" + $("#contact form textarea").val() },
+			dataType: "json"
+		})
+		.done(function ( response ) {
+			console.log(response);
+		});
+	});
+	
 }); 
