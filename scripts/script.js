@@ -96,8 +96,8 @@ $(document).ready(function () {
 	var submitBtn = $("button[type='submit']");
 	$("#contact form").submit(function (e) {
 		e.preventDefault();
-		if (submitBtn.html() == "Sent") {
-			submitBtn.html("Sending...").css("background-color", "yellow");
+		if (submitBtn.html() != "SENT") {
+			submitBtn.html("Sending...").css({"background-color": "yellow", "color": "black");
 			
 			$.ajax({
 				url: "//formspree.io/mustaghees99@live.com",
@@ -113,7 +113,7 @@ $(document).ready(function () {
 			})
 			.done(function ( response ) {
 				console.log(response.success);
-				submitBtn.html("Sent").css("background-color", "#1BB71B");
+				submitBtn.html("sent").css({"background-color": "#1BB71B", "color": "#FFFFFF");
 			});
 		} else {
 			console.log("already sent an email");
