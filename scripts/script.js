@@ -98,8 +98,12 @@ $(document).ready(function () {
 		$.ajax({
 			url: "//formspree.io/mustaghees99@live.com",
 			method: "POST",
-			data : { subject: $("#contact form input[name='_subject']").val(), 
-						message: "<h2>Sent by:</h2>" + $("#contact form input[name='name']").val() + "<h2>Message: </h2>" + $("#contact form textarea").val() },
+			data : {
+				Name: $("#contact form input[name='name']").val(),
+				Email: $("#contact form input[name='_repyto']").val(),
+				Subject: $("#contact form input[name='_subject']").val(), 
+				Message: $("#contact form textarea").val()
+			},
 			dataType: "json"
 		})
 		.done(function ( response ) {
