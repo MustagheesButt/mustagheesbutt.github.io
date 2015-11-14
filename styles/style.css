@@ -212,7 +212,7 @@ div.view span:hover {
 #portfolio main .details-box {
 	background-color: rgba(0, 0, 0, 0.7);
 	position: fixed;
-	top: 100%;
+	top: 105%;
 	left: 0;
 	z-index: 1;
 	transition: 0.3s linear;
@@ -223,7 +223,7 @@ div.view span:hover {
 	height: 100%;
 	margin-top: 5%;
 	margin-left: 8%;
-	padding-top: 3%;
+	padding-top: 5%;
 	padding-left: 3%;
 	background-color: #FFF;
 }
@@ -237,14 +237,14 @@ div.view span:hover {
 	height: 100%;
 	top: 0;
 }
-#portfolio main .details-box .fa-close {
+#portfolio main .details-box .close {
+	color: #B90606;
 	position: absolute;
-	top: -4%;
+	top: 2%;
 	right: 2%;
-	background-color: rgb(218, 57, 57);
-	font-size: 32px;
+	font-size: 16px;
 	padding: 1%;
-	border-radius: 50%;
+	cursor: pointer;
 }
 #portfolio main .item .fa-link {
 	float: right;

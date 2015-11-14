@@ -84,7 +84,7 @@ $(document).ready(function () {
 			$(".details-box .details-box-description").html(ele.description);
 			$(".details-box").addClass("active");
 		});
-		$(".details-box .fa-close").on("click", function () {
+		$(".details-box .close").on("click", function () {
 			$(".details-box").removeClass("active");
 		});
 	})

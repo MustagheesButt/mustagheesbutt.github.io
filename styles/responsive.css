@@ -23,8 +23,8 @@
 		width: 97%;
 		margin-left: 0;
 	}
-	#portfolio main .details-box .fa-close {
-		top: -2%;
+	#portfolio main .details-box img {
+		width: 85%;
 	}
 	#contact form input, textarea {
 		width: 90%;
