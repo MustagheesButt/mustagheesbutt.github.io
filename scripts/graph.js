@@ -43,6 +43,13 @@ var color = d3.scale.category10();
 
 var legendRectSize = 18;
 var legendSpacing = 4;
+if (window.innerWidth < 480) {
+	legendRectSize = 9;
+	legendSpacing = 5;
+} else if (window.innerWidth < 670) {
+	legendRectSize = 12;
+	legendSpacing = 6;
+}
 
 $(document).ready(function () {
 	
@@ -98,7 +105,11 @@ $(document).ready(function () {
 			  .style('stroke', color);
 		legend.append('text')
 			  .attr('x', legendRectSize + legendSpacing)
-			  .attr('y', legendRectSize - legendSpacing)
+			  .attr('y', legendRectSize - legendSpacing/2)
+			  .attr('style', function () {
+				  var fs = legendRectSize;
+				  return "font-size: " + fs + "px";
+			  })
 			  .text(function(d) { return d; });
 	}
 

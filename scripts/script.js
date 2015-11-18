@@ -90,6 +90,7 @@ $(document).ready(function () {
 	})
 	.fail(function () {
 		console.log("Portfolio data failed to load.");
+		$("#portfolio main .development, #portfolio main .design").append("<div>Something went wrong. Portfolio items could not be loaded!</div>");
 	});
 	
 	/* EMAIL HANDLER - CONTACT FORM */
