@@ -251,6 +251,9 @@ div.view span:hover {
 	margin-right: 5px;
 }
 /* CLEAR FIX FOR FLOATING ITEMS*/
+#portfolio main .development {
+	clear: both;
+}
 #portfolio main .design:after {
 	visibility: hidden;
 	display: block;

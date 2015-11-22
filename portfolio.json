@@ -1,7 +1,7 @@
 [
 {
 	"title": "Hubover",
-	"thumbnail": "./images/portfolio/hubover.png",
+	"thumbnail": "./images/portfolio/hubover.jpg",
 	"type": "blog",
 	"category": "dev",
 	"description": "A blog type website where any registered user can post articles of his/her interest.",
@@ -25,7 +25,7 @@
 },
 {
 	"title": "Hassaan's Photography",
-	"thumbnail": "./images/portfolio/hassan-logo.png",
+	"thumbnail": "./images/portfolio/hassan-logo.jpg",
 	"type": "logo",
 	"category": "des",
 	"description": "A logo designed for Hassaan's Photography, a photographer's Facebook page.",
