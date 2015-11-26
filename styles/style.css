@@ -199,12 +199,16 @@ div.view span:hover {
 	right: 0;
 	left: 100%;
 	text-align: center;
-	padding-top: 30%;
 	background-color: rgb(179, 6, 82);
 	color: #FFFFFF;
 	overflow: hidden;
 	cursor: pointer;
 	transition: 0.3s;
+}
+#portfolio main .item-thumb .details div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #portfolio main .item-thumb:hover .details {
 	left: 0;
@@ -251,6 +255,9 @@ div.view span:hover {
 	margin-right: 5px;
 }
 /* CLEAR FIX FOR FLOATING ITEMS*/
+#portfolio main .design {
+	clear: both;
+}
 #portfolio main .development {
 	clear: both;
 }

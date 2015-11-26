@@ -16,14 +16,6 @@
 	"link": "http://www.rustedbyte.blogspot.com"
 },
 {
-	"title": "Rusted Byte",
-	"thumbnail": "./images/portfolio/rbt.jpg",
-	"type": "blog",
-	"category": "dev",
-	"description": "A blog site featuring technical articles, how-to guides and more.",
-	"link": "http://www.rustedbyte.blogspot.com"
-},
-{
 	"title": "Hassaan's Photography",
 	"thumbnail": "./images/portfolio/hassan-logo.jpg",
 	"type": "logo",

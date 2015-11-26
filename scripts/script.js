@@ -56,12 +56,12 @@ $(document).ready(function () {
 		var des = $("#portfolio main .design");
 		dataArr.forEach(function (element, index, array) {
 			if (element.category == "dev") {
-				dev.append("<div class='item'><div class='item-thumb' style='background-image: url(" + element.thumbnail + 
-				"); '><div class='details'>SEE DETAILS</div></div><h3><span class='title'>" + element.title + 
+				dev.append("<div class='item'><div onclick='' class='item-thumb' style='background-image: url(" + element.thumbnail + 
+				"); '><div class='details'><div>SEE DETAILS</div></div></div><h3><span class='title'>" + element.title + 
 				"</span><a href=' " + element.link + " '><span class='fa fa-link'></span></a></h3></div>");
 			} else if (element.category == "des") {
-				des.append("<div class='item'><div class='item-thumb' style='background-image: url(" + element.thumbnail + 
-				"); '><div class='details'>SEE DETAILS</div></div><h3><span class='title'>" + element.title + 
+				des.append("<div class='item'><div onclick='' class='item-thumb' style='background-image: url(" + element.thumbnail + 
+				"); '><div class='details'><div>SEE DETAILS</div></div></div><h3><span class='title'>" + element.title + 
 				"</span><a href=' " + element.link + " '><span class='fa fa-link'></span></a></h3></div>");
 			}
 		});
