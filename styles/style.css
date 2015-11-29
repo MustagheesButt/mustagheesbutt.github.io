@@ -46,6 +46,33 @@ a:hover {
 }
 
 /*  CUSTOM COMPONENTS */
+
+/*
+ * PRELOADER
+ */
+#preloader {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+}
+#preloader .spinner {
+	width: 25vw;
+	height: 25vw;
+	border: 10px solid transparent;
+	border-top-color: rgb(179, 6, 82);
+	border-radius: 50%;
+	position: absolute;
+	top: 30%;
+	left: 35%;
+	
+	-webkit-animation: rotate 1s infinite linear;
+	animation: rotate 1s infinite linear;
+}
+
 header {
 	height: 100vh;
 	position: relative;
@@ -425,4 +452,13 @@ div.view span:hover {
 }
 .soc-linkedin:before {
     content:'j';
+}
+
+@keyframes rotate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
 }

@@ -1,3 +1,12 @@
+var everythingLoaded = setInterval(function() {
+  if (/loaded|complete/.test(document.readyState)) {
+    clearInterval(everythingLoaded);
+	// this is the function that gets called when everything is loaded
+	// Remove preloader once the DOM is ready
+	$("#preloader").fadeOut();
+  }
+}, 10);
+
 $(document).ready(function () {
 	
 	// Inertial scrolling
