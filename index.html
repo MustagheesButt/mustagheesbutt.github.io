@@ -55,7 +55,7 @@
  </div>
  
   <!-- Header -->
-  <header>
+  <header class="main">
    <div class="description">
     <div class="responsive-image"></div>
     Web Designer & Developer <span>Expertise in HTML, CSS, JavaScript / jQuery / D3 / AngularJS / ProcessingJS, PHP, SQL, C and more...</span>
@@ -72,7 +72,7 @@
     <section class="intro">
      <h2>Intro:</h2>
 	 <blockquote>
-	  <p>Hi! The name is <i>Mustaghees</i> and I am a Full Stack Web Designer & Developer. I have been in this field for a while and have gained a lot of experience.</p>
+	  <p>Hi! The name is <i>Mustaghees</i> and I am a Full Stack Web Designer & Developer. I have been in this field for a while and have gained a lot of experience. <a href="details.html">See Details</a> about me.</p>
 	 </blockquote>
     </section>
     
@@ -356,9 +356,9 @@
    <main>
    <blockquote>Wanna hire me? Use the contact form below to write your word to me. Or check out other links to professional sites and social accounts below the contact form. You can use them to contact me.</blockquote>
 	<h3>E-mail Me Now:</h3>
-	<form>
+	<form name="contact">
 		<input type="text" name="name" placeholder="Name" /></br></br>
-		<input type="text" name="email" placeholder="Your email address" /></br></br>
+		<input type="email" name="email" placeholder="Your email address" /><label class="email_label"></label></br></br>
 		<input type="text" name="_subject" placeholder="Subject" /></br></br>
 		<input type="text" name="_gotcha" style="display:none" /><!-- to avoid spam -->
 		

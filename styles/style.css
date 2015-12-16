@@ -47,7 +47,7 @@ a:hover {
 
 /*  CUSTOM COMPONENTS */
 
-header {
+header.main {
 	height: 100vh;
 	position: relative;
 	background-image: url("../images/cover-normal.jpg");
@@ -55,22 +55,22 @@ header {
 	background-position: center center;
 	overflow: hidden;
 }
-header .description {
+header.main .description {
 	width: 55%;
 	font-size: 42px;
 	font-weight: 300;
 	margin-top: 20%;
 	margin-left: 7%;
 }
-header .description .responsive-image {
+header.main .description .responsive-image {
 	display: none;
 }
-header .description span {
+header.main .description span {
 	display: block;
 	font-size: 24px;
 	color: #2F2F2F;
 }
-header .scroll-down {
+header.main .scroll-down {
 	position: absolute;
     bottom: 8%;
     left: 0;
@@ -284,6 +284,9 @@ div.view span:hover {
 #contact form {
 	text-align: center;
 }
+#contact form label {
+	position: absolute;
+}
 #contact form input, textarea {
 	font-family: Roboto;
 	font-size: 16px;
@@ -427,4 +430,46 @@ div.view span:hover {
 }
 .soc-linkedin:before {
     content:'j';
+}
+
+/**
+  * BLOG STYLES
+  **/
+
+.blog header {
+	font-weight: 100;
+	font-size: 48px;
+	text-align: center;
+	color: rgb(179, 6, 82);
+}
+.blog main {
+	background-image: url("../images/texture.jpg");
+	padding: 2%;
+}
+.blog main section {
+	float: left;
+	width: 65%;
+}
+.blog main .article {
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px;
+    margin: 10px;
+}
+.blog main .article h2 small {
+	color: rgb(147, 147, 147);
+	float: right;
+	padding-top: 5px;
+}
+.sidebar {
+	float: right;
+	width: 30%;
+}
+/* FLOAT FIXES */
+.blog main:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }

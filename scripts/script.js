@@ -129,5 +129,29 @@ $(document).ready(function () {
 			console.log("already sent an email");
 		}
 	});
+	/* CONTACT FORM VALIDATOR */
+	$("form input").on("change keyup paste", function () {
+		if ( isValid( $(this).attr("name") ) == false ) {
+			$(".email_label").html("Make sure the email is valid!");
+		} else {
+			$(".email_label").html("");
+		}
+	});
 	
-}); 
+});
+
+function isValid(type) {
+	if (type == "name") {
+		alert( $(this).val() );
+	} else {
+		var email = document.forms["contact"]["email"].value;
+		var atSym = email.indexOf("@");
+		var lastDot = email.lastIndexOf(".");
+		
+		if (atSym < 1 || lastDot < (atSym + 1) || (lastDot + 3) > email.length) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+}

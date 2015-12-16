@@ -29,7 +29,7 @@
 			<li><a href="#edu">Education</a></li>
 			<li><a href="#skills">Skills</a></li>
 			<li><a href="#lang">Languages</a></li>
-			<li><a href="#xp">Experience</a></li>
+			<!--<li><a href="#xp">Experience</a></li>-->
 			<li><a href="#interests">Interests</a></li>
 		</ol>
 	</div>
@@ -55,7 +55,7 @@
 	<section id="skills">
 		<h2>Skills</h2>
 		
-		<p>Web Designing, Front-end Development, Back-end Development, Search Engine Optimization(SEO), Website Speed Optimization, Git/GitHub (Version Control Systems VCS), Graphic Designing, Logo Designing, Information Gathering, Writing.</p>
+		<p>Web Designing, Front-end Development, Back-end Development, Search Engine Optimization(SEO), Website Speed Optimization, Graphic Designing, Logo Designing, Information Gathering, Writing.</p>
 	</section>
 	
 	<section id="lang">
@@ -104,6 +104,11 @@
 	}
 	section>:not(h2) {
 		padding-left: 25px;
+	}
+	@media only print {
+		#table {
+			display: none;
+		}
 	}
   </style>
   <!-- CSS AND JS WERE MOVED HERE FOR SPEED OPTIMIZATION -->

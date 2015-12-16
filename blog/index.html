@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Blog | Mustaghees | Web Designer & Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The official Blog site of Mustaghees Butt." />
+  <meta name="author" content="Mustaghees Butt" />
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="../images/favicon.png">
+  
+  <style>
+	/*
+	 * PRELOADER CSS
+	 * included here so it shows up first. And FOUC issue doesn't occurs
+	 */
+	#preloader {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+	}
+	#preloader .spinner {
+		width: 25vw;
+		height: 25vw;
+		border: 10px solid transparent;
+		border-top-color: rgb(179, 6, 82);
+		border-radius: 50%;
+		position: absolute;
+		top: 30%;
+		left: 35%;
+
+		-webkit-animation: rotate 1s infinite linear;
+		animation: rotate 1s infinite linear;
+	}
+	@keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(360deg);}
+	}
+	@-webkit-keyframes rotate {
+		0% {-webkit-transform: rotate(0deg);}
+		100% {-webkit-transform: rotate(360deg);}
+	}
+  </style>
+ </head>
+ 
+ <body class="blog" ng-app="blog">
+ 
+ <!-- PRELOADER - Handles Flash Of Unstyled Content (FOUC) issue -->
+ <div id="preloader">
+	<div class="spinner"></div>
+ </div>
+ 
+ <header>
+	<h1>Mustaghees. <small>Web Designer & Developer</small></h1>
+	<div class="description">The Blog of Mustaghees Butt.</div>
+ </header>
+ 
+ <main ng-controller="BlogController as blog">
+	
+	<section>
+		
+		<div ng-repeat="article in articles" class="article">
+			<h2>{{ article.title }} <small>By: {{ article.author }}</small></h2>
+			<div>
+				<p ng-include="article.url"></p>{{ getText($index) }}
+			</div>
+		</div>
+	
+	</section>
+	
+	<div class="sidebar">
+		<ul>
+			<li ng-repeat="article in articles">{{ article.title }}</li>
+		</ul>
+	</div>
+	
+ </main>
+  
+ <footer>
+	<p>&copy; Copyright. All rights reserved.</p>
+ </footer>
+  
+  <!-- GOOGLE ANALYTICS TRACKING -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-54774200-2', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+  
+  <!-- CSS AND JS WERE MOVED HERE FOR SPEED OPTIMIZATION -->
+  <link type="text/css" rel="stylesheet" href="../styles/style.css" />
+  <link type="text/css" rel="stylesheet" href="../styles/responsive.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <script src="../scripts/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/blog-app.js"></script>
+  <script src="../scripts/script.js"></script>
+  
+ </body>
+ 
+</html>
