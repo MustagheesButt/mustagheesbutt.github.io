@@ -47,7 +47,33 @@ a:hover {
 
 /*  CUSTOM COMPONENTS */
 
-header.main {
+nav {
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 0 1%;
+}
+nav .nav-left, nav .nav-middle, nav .nav-right {
+	display: inline-block;
+	width: 33%;
+}
+nav .nav-left .logo {
+	font-weight: 100;
+	color: #B30652;
+}
+nav .nav-left .logo span {
+	font-family: Myriad Pro;
+}
+nav .nav-right {
+	font-size: 20px;
+}
+nav ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline;
+	margin-right: 5%;
+}
+
+header {
 	height: 100vh;
 	position: relative;
 	background-image: url("../images/cover-normal.jpg");
@@ -55,22 +81,22 @@ header.main {
 	background-position: center center;
 	overflow: hidden;
 }
-header.main .description {
+header .description {
 	width: 55%;
 	font-size: 42px;
 	font-weight: 300;
 	margin-top: 20%;
 	margin-left: 7%;
 }
-header.main .description .responsive-image {
+header .description .responsive-image {
 	display: none;
 }
-header.main .description span {
+header .description span {
 	display: block;
 	font-size: 24px;
 	color: #2F2F2F;
 }
-header.main .scroll-down {
+header .scroll-down {
 	position: absolute;
     bottom: 8%;
     left: 0;
@@ -432,15 +458,27 @@ div.view span:hover {
     content:'j';
 }
 
+.socicon-twitter {
+	color: #55acee;
+}
+.socicon-googleplus {
+	color: #db4437;
+}
+.socicon-linkedin {
+	color: #ffffff;
+}
+
 /**
   * BLOG STYLES
   **/
 
 .blog header {
+	background-image: url("../images/blog-header-bg.png");
 	font-weight: 100;
 	font-size: 48px;
 	text-align: center;
 	color: rgb(179, 6, 82);
+	height: 260px;
 }
 .blog main {
 	background-image: url("../images/texture.jpg");
@@ -448,12 +486,12 @@ div.view span:hover {
 }
 .blog main section {
 	float: left;
-	width: 65%;
+	width: 73%;
 }
 .blog main .article {
-    background-color: rgba(255,255,255,0.7);
+    background-color: aliceblue;
     padding: 10px;
-    margin: 10px;
+	margin: 10px;
 }
 .blog main .article h2 small {
 	color: rgb(147, 147, 147);
@@ -462,7 +500,9 @@ div.view span:hover {
 }
 .sidebar {
 	float: right;
-	width: 30%;
+	width: 23%;
+	background-color: aliceblue;
+	margin: 10px;
 }
 /* FLOAT FIXES */
 .blog main:after {

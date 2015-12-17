@@ -55,9 +55,35 @@
 	<div class="spinner"></div>
  </div>
  
+ <nav>
+	
+	<div class="nav-left">
+		<a href="http://mustagheesbutt.github.io">
+			<h1 class="logo"><span>M</span>ustaghees</h1>
+		</a>
+	</div>
+	
+	<div class="nav-middle">
+		<ul>
+			<a href="../index.html"><li>Home</li></a>
+			<a href="index.html"><li>Blog</li></a>
+			<a href="../packages.html"><li>Packages</li></a>
+			<a href="../details.html"><li>CV</li></a>
+		</ul>
+	</div>
+	
+	<div class="nav-right">
+		<ul>
+			<li><a target="_blank" class="socicon-twitter" href="https://twitter.com/MustagheesButt"></a></li>
+			<li><a target="_blank" class="socicon-googleplus" href="https://plus.google.com/104400783426208094984/posts"></a></li>
+			<li><a target="_blank" class="socicon-linkedin" href="https://www.linkedin.com/pub/mustaghees-butt/b3/936/973"></a></li>
+		</ul>
+	</div>
+	
+ </nav>
+ 
  <header>
-	<h1>Mustaghees. <small>Web Designer & Developer</small></h1>
-	<div class="description">The Blog of Mustaghees Butt.</div>
+	<div class="description" style="margin-top: 10%;">The Blog of Mustaghees Butt.</div>
  </header>
  
  <main ng-controller="BlogController as blog">
@@ -67,7 +93,7 @@
 		<div ng-repeat="article in articles" class="article">
 			<h2>{{ article.title }} <small>By: {{ article.author }}</small></h2>
 			<div>
-				<p ng-include="article.url"></p>{{ getText($index) }}
+				<p ng-include="article.url"></p>
 			</div>
 		</div>
 	
@@ -102,6 +128,7 @@
   <link type="text/css" rel="stylesheet" href="../styles/responsive.css" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
   
   <script src="../scripts/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

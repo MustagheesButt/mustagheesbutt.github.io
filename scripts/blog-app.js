@@ -26,12 +26,4 @@ blog.controller("BlogController", function ($scope, articlesService) {
 		$scope.articles = data.data;
 	});
 	
-	$scope.getText = function (article) {
-		$.getJSON($scope.articles[article].url).done(function (resp) {
-			return resp;
-		});
-	};
-	
 });
-
-// CUSTOM DIRECTIVES
