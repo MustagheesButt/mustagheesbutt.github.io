@@ -7,6 +7,16 @@
 		width: 50%;
 	}
 }
+@media (max-width: 840px) {
+	nav .nav-left {
+		width: 100%;
+		text-align: center;
+	}
+	nav .nav-middle, nav .nav-right {
+		width: 49%;
+		text-align: center;
+	}
+}
 @media (max-width: 640px) {
 	header .description {
 		margin-top: 10%;
@@ -56,6 +66,9 @@
 }
 
 @media (orientation: portrait) and (max-width: 480px) {
+	nav .nav-middle, nav .nav-right {
+		width: 100%;
+	}
 	header {
 		background-image: url("../images/cover-small.jpg");
 		color: #FFFFFF;
@@ -85,5 +98,14 @@
 	header .description span {
 		font-size: 16px;
 		color: #E2E2E2;
+	}
+	
+	/* BLOG STYLES */
+	.blog main section {
+		float: none;
+		width: 100%;
+	}
+	.sidebar {
+		display: none;
 	}
 }
