@@ -1,6 +1,3 @@
-// ARTICLES DATA
-var articles = $.getJSON("articles.json");
-
 // SETUP MODULES
 var blog = angular.module("blog", [ ]);
 
@@ -8,7 +5,7 @@ var blog = angular.module("blog", [ ]);
 blog.service("articlesService", function ($http, $q) {
 	
 	var deffered = $q.defer();
-	$http.get("../blog/articles.json").then(function (data) {
+	$http.get("../blog/posts.json").then(function (data) {
 		deffered.resolve(data);
 	});
 	
@@ -23,7 +20,7 @@ blog.controller("BlogController", function ($scope, articlesService) {
 	
 	var promise = articlesService.getArticles();
 	promise.then(function (data) {
-		$scope.articles = data.data;
+		$scope.posts = data.data;
 	});
 	
 });

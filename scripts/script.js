@@ -131,19 +131,17 @@ $(document).ready(function () {
 	});
 	/* CONTACT FORM VALIDATOR */
 	$("form input").on("change keyup paste", function () {
-		if ( isValid( $(this).attr("name") ) == false ) {
-			$(".email_label").html("Make sure the email is valid!");
+		if ( isValid( $(this).attr("type") ) == false ) {
+			$(this).addClass("wrong");
 		} else {
-			$(".email_label").html("");
+			$(this).removeClass("wrong");
 		}
 	});
 	
 });
 
 function isValid(type) {
-	if (type == "name") {
-		alert( $(this).val() );
-	} else {
+	if (type == "email") {
 		var email = document.forms["contact"]["email"].value;
 		var atSym = email.indexOf("@");
 		var lastDot = email.lastIndexOf(".");

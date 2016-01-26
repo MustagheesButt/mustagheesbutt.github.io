@@ -1,13 +1,15 @@
 [
 {
 	"title": "Insights: DNS",
-	"url": "articles/insights-dns.html",
+	"id": 0,
+	"url": "posts/insights-dns.html",
 	"date": "20/03/2014",
 	"author": "M. Mustaghees Butt"
 },
 {
 	"title": "Tutorial: Set Video as Wallpaper - Windows",
-	"url": "articles/set-video-wallpaper.html",
+	"id": 1,
+	"url": "posts/set-video-wallpaper.html",
 	"date": "31/05/2013",
 	"author": "M. Mustaghees Butt"
 }

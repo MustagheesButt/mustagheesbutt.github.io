@@ -17,12 +17,12 @@ table tr td:first-child {
 }
 blockquote {
 	background: #f9f9f9;
-	border-left: 10px solid #D2527F;
 	margin: 1.5em 10px;
 	padding: 1em 10px;
-	quotes: "\201C""\201D""\2018""\2019";
-	font-family: Myraid Pro;
+	font-family: Georgia;
 	font-size: 20px;
+	font-style: italic;
+	line-height: 32px;
 	text-align: center;
 }
 blockquote:before {
@@ -72,6 +72,9 @@ nav ul {
 nav ul li {
 	display: inline;
 	margin-right: 5%;
+}
+footer {
+	padding: 0 1%;
 }
 
 header {
@@ -172,14 +175,6 @@ div.view div > span {
 	padding: 3px;
 	transition: 0.5s;
 }
-/*div.view div > span:first-child {
-	border-top-left-radius: 35%;
-    border-bottom-left-radius: 35%;
-}
-div.view div > span:last-child {
-	border-top-right-radius: 35%;
-    border-bottom-right-radius: 35%;
-}*/
 div.view span.active {
 	color: white;
 	background-color: blue;
@@ -235,7 +230,8 @@ div.view span:hover {
 	transition: 0.3s;
 }
 #portfolio main .item-thumb .details div {
-    position: relative;
+    position: absolute;
+	width: 100%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -324,6 +320,9 @@ div.view span:hover {
 #contact form input {
 	border: none;
 	border-bottom: 2px solid black;
+}
+#contact form input.wrong {
+	background-color: #FFBABA;
 }
 #contact textarea {
 	height: 150px;
@@ -489,15 +488,37 @@ div.view span:hover {
 	float: left;
 	width: 73%;
 }
-.blog main .article {
+.blog main .post {
     background-color: aliceblue;
-    padding: 10px;
+	position: relative;
 	margin: 10px;
+	height: 500px;
+	overflow: hidden;
 }
-.blog main .article h2 small {
+.blog main .post.full {
+	height: 100%;
+}
+.blog main .post h2 {
+	padding: 10px;
+}
+.blog main .post h2 small {
 	color: rgb(147, 147, 147);
 	float: right;
 	padding-top: 5px;
+}
+.blog main .post .post-body {
+	padding: 10px;
+}
+.blog main .post img {
+	width: 95%;
+}
+.blog main .post .more {
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	padding: 3% 0;
 }
 .sidebar {
 	float: right;

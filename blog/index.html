@@ -90,25 +90,27 @@
 	
 	<section>
 		
-		<div ng-repeat="article in articles" class="article">
-			<h2>{{ article.title }} <small>By: {{ article.author }}</small></h2>
-			<div>
-				<p ng-include="article.url"></p>
+		<div ng-repeat="post in posts" class="post">
+			<h2>{{ post.title }} <small>By {{ post.author }} on {{ post.date }}</small></h2>
+			<div class="post-body">
+				<p ng-include="post.url"></p>
 			</div>
+			
+			<div class="more" ng-hide=""><a ng-click="">SEE MORE</a></div>
 		</div>
 	
 	</section>
 	
 	<div class="sidebar">
 		<ul>
-			<li ng-repeat="article in articles">{{ article.title }}</li>
+			<li ng-repeat="post in posts"><a href="{{ post.url }}">{{ post.title }}</a></li>
 		</ul>
 	</div>
 	
  </main>
   
  <footer>
-	<p>&copy; Copyright. All rights reserved.</p>
+	<p>&copy; Copyright Mustaghees Butt, 2015 - 2016. All rights reserved.</p>
  </footer>
   
   <!-- GOOGLE ANALYTICS TRACKING -->
