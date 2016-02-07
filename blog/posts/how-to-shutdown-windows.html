@@ -1,0 +1,99 @@
+<h3>Shutdown Windows with different styles!</h3>
+<p>
+Generally everyone who use Windows knows about its feature of Shutdown. I mean to say that 99.9% people who use computers with Windows as OS know how to shutdown. But it is the common way of shutting down, it is usually clicking the shutdown button located in the start menu of start button.
+</p>
+
+<p>
+The question is that if I know that everyone know about shutdown is then why I'm talking about it. Actually the shutdown I'm talking about is not that comman one , but is a special one. In which you can shutdown Windows with different styles. This technique comprises of using MS-DOS or Command prompt. All you need is MS-DOS or Command prompt which are already integrated in Windows.
+</p>
+
+<p>
+If you don't know how to open the command prompt, then here's the process:
+<ol>
+	<li>Click on the start button,</li>
+	<li>Type "cmd.exe" in search box and press enter key. Or press "Win(Windows key) + R" and then type "cmd" or "cmd.exe" and press enter.</li>
+</ol>
+There are many cool tricks that I will show you. So let's get started.
+</p>
+
+<ol>
+	<li><h4>Shutting down using -s</h4>
+	<p>
+	Now type the following command:
+	<pre>
+	shutdown -s
+	</pre>
+	This command<i> </i>will display a message that your computer <i>will shutdown in less than a minute</i>, or something like that.Then your computer will shutdown after 30 seconds.
+	</p>
+	</li>
+
+	<li><h4>Aborting shutdown with -a</h4>
+	<p>
+	This command will abort the shutdown operation, if any in progress. So after using <span style="color: #cc0000;">-s</span> then try <span style="color: #cc0000;">-a</span> (within 30s). Now type:
+	<pre>
+	shutdown -a
+	</pre>
+	A message will be displayed "log off was canceled", or something like that.
+	</p>
+	</li>
+	
+	<li><h4>Shutting down by giving a time using -s -t</h4>
+	<p>
+	By default the shutdown time for <i>-s</i> is 30 s. To change this time you can use <i>-t</i>. Now type:
+	<pre>
+	shutdown -s -t 25
+	</pre>
+	You can replace <span style="color: #351c75;">25</span> with any time you want.
+	</p>
+	</li>
+
+	<li><h4>Displaying a message before shutting down using -c</h4>
+	<p>
+	This command will display a message before shutting down. Type the following:
+	<pre>
+	shutdown -s -c "any text you want"
+	</pre>
+	After hitting enter a window will appear with text in it. In addition you can also use <i>-t</i> with it. Type the following:
+	<pre>
+	shutdown -s -t 35 -c "its going to shutdown"
+	</pre>
+
+	<span style="color: red;">Note:</span> Don't forget the single space between -c &amp; the quotation marks(") .
+	</p>
+	</li>
+
+	<li><h4>Logging off using -l</h4>
+	<p>
+	Using this command will just log off the current user. Type:
+	<pre>
+	shutdown -l
+	</pre>
+	</p>
+
+	<li><h4>Opening the advanced shutdown dialog box using -i</h4>
+	<p>
+	This will show you the advanced dialog box with several options for shutting down windows and the functions which the above commands perform. Type:
+	<pre>
+	shutdown -i
+	</pre>
+	</p>
+	</li>
+	
+	<li><h4>Shutdown all computers on a Network with -m</h4>
+	<p>
+	You will need the IP address of the computer on the network, or the computer name. To get the computer name:
+	<ol>
+		<li>Go to <b>Control panel</b>.</li>
+		<li>Go to <b>System</b>, then <b>System</b> or <b>Properties</b>.</li>
+		<li>You will see somewhere Computer Name.</li>
+	</ol>
+	After you get the Name type the following:
+	<pre>
+	shutdown -s -m \"<span style="color: red;">IP address</span> or <span style="color: red;">Computer name</span>"
+	</pre>
+	</p>
+	</li>
+
+</ol>
+
+Replace IP address or Computer name with the IP or computer name. That would be all! Hope you like it and find it useful. Please leave your comments!

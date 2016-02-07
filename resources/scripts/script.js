@@ -142,11 +142,11 @@ $(document).ready(function () {
 
 function isValid(type) {
 	if (type == "email") {
+		var emailSyntax = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		var email = document.forms["contact"]["email"].value;
-		var atSym = email.indexOf("@");
-		var lastDot = email.lastIndexOf(".");
 		
-		if (atSym < 1 || lastDot < (atSym + 1) || (lastDot + 3) > email.length) {
+		var result = emailSyntax.test(email);
+		if ( result == false ) {
 			return false;
 		} else {
 			return true;

@@ -1,30 +1,45 @@
 <h3>What is DNS ?</h3>
 
-<p>DNS stands for Domain Name System, not Domain Name Server. It is a protocol or a set of methods and actions which defines everything happening from the requesting of a webpage by a client, through the conversion of domain into IP address and the processes taking place in server, to the providing or redirecting of client to the requested webpage. It is a short and easy summary of DNS. But it should be noted that the files and webpages are not transferred by DNS, in fact only their addresses are transferred.</p>
+<p>
+<b>DNS</b> stands for <b>D</b>omain <b>N</b>ame <b>S</b>ystem, not Domain Name Server. It's a protocol or a set of methods and actions which defines everything happening from the requesting of a webpage by a client, through the conversion of domain name into an IP address and the processes taking place in server, to the providing or redirecting of client to the requested webpage. That was just the summary of DNS.
+</br></br>
+Note that webpages and other files are not transferred by DNS, in fact only their IP addresses are transferred.
+</p>
 
 <h4>Steps involved in DNS</h4>
 
 <ol>
 	<li>The Domain or URL</li>
-First the client or user requests for a webpage in a web browser. The syntax of URL or Domain which is entered in the address bar of the web browser is something like this:
-A domain name consists of several parts called labels. The are separated by dots, such as www.rustedbyte.blogspot.com .
-The right-most label is called top level domain. In the above example .com is the top level domain. The other labels to the left of top level domain are called subdomains or subdivisions of the top level domain.The subdivisions may be up to 127.
-Any label may not start or end with a hyphen.
+	<p>
+	First the client or user makes a request for a webpage in a web browser. The syntax of URL or domain which is entered in the address bar of the web browser is something like this:
+	</br></br>
+	A domain name consists of several parts called <i>labels</i>. They are separated by dots, such as <i>"www.rustedbyte.blogspot.com"</i>. The right-most label is called <i>top level domain</i>. In the above example <i>.com</i> is the top level domain. The other labels, which are to the left of top level domain, are called <i>subdomains</i> or subdivisions of the top level domain. The subdivisions may be up to 127. Any label may not start or end with a hyphen.
+</p>
 
 	<li>Conversion of Domain or URL into IP address</li>
-Through DNS, the Domain, web address or URL you have entered is converted into its IP address. For example, google.com has IP address : 173.194.124.39 .
-  You can find out the IP address of almost any website by pinging. Just open command-prompt, or cmd.exe. And the use ping command, such as:
-        ping rusted.blogspot.com
-You can use the IP address to open a website by just entering the IP address into the address bar.
+	<p>
+	Through DNS, the domain, web address or URL you have entered is converted into its IP address. For example, <i>google.com</i> has the IP address: <i>"173.194.124.39"</i>.
+	  You can find out the IP address of almost any website by pinging. Just open command-prompt, or <b>cmd.exe</b>. And then use <i>ping</i> command, such as:
+			<pre>ping rusted.blogspot.com</pre>
+	You can use the IP address to open a website by just entering the IP address into the address bar.
+	</p>
 
 	<li>IP address gets transferred to server</li>
-The IP address gets transferred to a server, usually ISP's server. The server looks up for the IP address in its memory, if found then it will redirect the client to the server which is hosting the requested webpage. If not found then it will transfer the requested address to another server, if that server knows the address of the server which hosts the requested webpage, then it will transfer required info to the ISP's server.
+	<p>
+	The IP address gets transferred to a server, usually ISP's server. The server looks up for the IP address in its memory, if found then it will redirect the client to the server which is hosting the requested webpage. If not found, then it will transfer the requested address to another server. The cycle will continue till the IP address of the server which hosts the requested webpage is found. Once found, that address will be return to the client who requested it in the first place.
+	</p>
 
-	<li>Caching of the webpage's server's address</li>
-If the server which gets the clients request, already has the requested webpage's hosting server's address, then it will just redirect the client to the requested webpage. If not, the above step will take place. After getting the address from another server, the ISP's server will cache the address or store it in its memory, in case there are more requests for the same webpage.
+	<li>Caching of the webpage server's address</li>
+	<p>
+	If the server which gets the client's request already has the requested webpage's hosting server's address, then it will just redirect the client to the requested webpage. If not, the above step will take place.
+	</br></br>
+	After getting the IP address from another server, the ISP's server will cache the address or store it in its memory, in case there are more requests for the same webpage.
+	</p>
 
 	<li>Back to the client</li>
-The client gets redirected to the requested webpage.
+	<p>
+	The client gets redirected to the requested webpage.
+	</p>
 </ol>
 
 <img border="0" src="http://1.bp.blogspot.com/-B6ol0Uqm5So/UywRMUO48DI/AAAAAAAAAUc/gYGRqx0UV_Y/s1600/DNS.jpg" height="480" width="640">
