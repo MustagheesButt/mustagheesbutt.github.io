@@ -83,7 +83,7 @@ nav ul li {
 }
 
 footer {
-	padding: 3%;
+	padding: 5%;
 }
 footer div.links {
 	text-align: center;
@@ -322,9 +322,6 @@ div.view span:hover {
 #contact form {
 	text-align: center;
 }
-#contact form label {
-	position: absolute;
-}
 #contact form input, textarea {
 	width: 40%;
 	transition: 0.5s;
@@ -393,7 +390,7 @@ div.view span:hover {
 }
 .blog main .blognav, .blog main .post, .blog main .sidebar {
 	background-color: aliceblue;
-	margin: 10px;
+	margin: 10px 5px;
 	padding: 15px;
 }
 .blog main .blognav div {
@@ -457,15 +454,45 @@ div.view span:hover {
 
 section.marketing {
 	height: 90vh;
-	background-image: url("../images/marketing-bg.png");
+	position: relative;
+}
+section.marketing div.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
 	background-size: cover;
 }
-section.marketing div {
-	padding-top: 3em;
-	padding-left: 3em;
+section.marketing div.slide:nth-child(1) {
+	background-image: url("../images/marketing-bg1.png");
+}
+section.marketing div.slide:nth-child(2) {
+	background-image: url("../images/marketing-bg2.png");
+}
+section.marketing div.slide:nth-child(3) {
+	background-image: url("../images/marketing-bg3.png");
+}
+section.marketing div.slide > div {
+	width: 50%;
+	padding: 3em 0 0 3em;
+}
+section.marketing div.slide-controls {
+	padding-left: 5%;
+	position: absolute;
+	bottom: 5%;
+}
+section.marketing div.slide-controls span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+section.marketing div.slide-controls span.active {
+	background-color: #B30652;
 }
 section.marketing h1 {
-	color: #00B5FF;
+	color: #FF147B;
 	font-size: 56px;
 	font-weight: 100;
 	margin: 0;

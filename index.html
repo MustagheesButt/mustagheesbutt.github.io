@@ -45,6 +45,19 @@
 		100% {-webkit-transform: rotate(360deg);}
 	}
   </style>
+	
+	<!-- GOOGLE ANALYTICS TRACKING | Placed here as a requirement (for verification) for Search Console/Webmaster Tools -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-54774200-2', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+	
  </head>
  
  <body>
@@ -56,22 +69,22 @@
  
  <!-- NavBar -->
  <nav>
-	
+
 	<div class="nav-left">
 		<a href="http://mustagheesbutt.github.io">
 			<h1 class="logo"><span>M</span>ustaghees</h1>
 		</a>
 	</div>
-	
+
 	<div class="nav-middle">
 		<ul>
 			<a href="./index.html"><li>Home</li></a>
 			<a href="./blog/index.html"><li>Blog</li></a>
-			<a href="./packages/packages.html"><li>Packages</li></a>
+			<a href="./pricing/pricing.html"><li>Pricing</li></a>
 			<a href="./details/details.html"><li>CV</li></a>
 		</ul>
 	</div>
-	
+
 	<div class="nav-right">
 		<ul>
 			<li><a target="_blank" href="https://twitter.com/MustagheesButt"><i class="fa fa-twitter"></i></a></li>
@@ -79,7 +92,7 @@
 			<li><a target="_blank" href="https://www.linkedin.com/pub/mustaghees-butt/b3/936/973"><i class="fa fa-linkedin"></i></a></li>
 		</ul>
 	</div>
-	
+
  </nav>
  
   <!-- Header -->
@@ -378,31 +391,8 @@
   </div>
   </main>
   
- <footer>
-	<div class="links">
-		<ul>
-		 <li><a target="_blank" href="https://www.upwork.com/freelancers/~01cd4cdc2a87c4ae22">Upwork</a></li>
-		 <li><a target="_blank" href="https://www.freelancer.com/u/MustagheesButt.html">Freelancer</a></li>
-		 <li><a target="_blank" href="https://www.fiverr.com/users/mustaghees">Fiverr</a></li>
-		 <li><a target="_blank" href="https://twitter.com/MustagheesButt">Twitter</a></li>
-		 <li><a target="_blank" href="https://plus.google.com/104400783426208094984/posts">Google+</a></li>
-		 <li><a target="_blank" href="https://www.linkedin.com/pub/mustaghees-butt/b3/936/973">LinkedIn</a></li>
-		</ul>
-	</div>
-	<p>&copy; Copyright Mustaghees Butt, 2015 - 2016. All rights reserved.</p>
- </footer>
-  
-  <!-- GOOGLE ANALYTICS TRACKING -->
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-54774200-2', 'auto');
-	ga('send', 'pageview');
-
-	</script>
+ <!-- FOOTER -->
+ <ng-include src=" 'templates/footer.html' "></ng-include>
   
   <!-- CSS AND JS WERE MOVED HERE FOR SPEED OPTIMIZATION -->
   <link type="text/css" rel="stylesheet" href="resources/styles/style.css" />
@@ -410,6 +400,8 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   
+  <script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+  <!--script src="https://code.angularjs.org/1.4.9/angular.min.js"></script-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="resources/scripts/jquery-ui.min.js"></script>

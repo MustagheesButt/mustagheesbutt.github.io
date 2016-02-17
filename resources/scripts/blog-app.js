@@ -27,6 +27,10 @@ blog.service("articlesService", function ($http, $q) {
 	var deffered = $q.defer();
 	$http.get("../blog/posts.json").then(function (data) {
 		deffered.resolve(data);
+	}, /* if failed */ function (error) {
+		if (error.status == -1) {
+			$("main section").html("Something went wrong. Probably JavaScript is disabled, or some CORS issue.")
+		}
 	});
 	
 	this.getArticles = function () {

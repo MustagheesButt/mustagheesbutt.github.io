@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <title>Packages | Mustaghees | Web Designer & Developer</title>
+  <title>Pricing | Mustaghees - Web Designer & Developer</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="View all services and packages, from Frontend to Backend, available and offered here at the official website of Web Designer and Developer, Mustaghees Butt." />
+  <meta name="description" content="Pricing details for our services. View all services and packages, from Frontend to Backend, available here." />
   <meta name="author" content="Mustaghees Butt" />
   
   <link rel="icon" 
@@ -68,7 +68,7 @@
 		<ul>
 			<a href="../index.html"><li>Home</li></a>
 			<a href="../blog/index.html"><li>Blog</li></a>
-			<a href="../packages/packages.html"><li>Packages</li></a>
+			<a href="../pricing/pricing.html"><li>Pricing</li></a>
 			<a href="../details/details.html"><li>CV</li></a>
 		</ul>
 	</div>
@@ -85,10 +85,36 @@
  
  <!-- Header -->
  <section class="marketing">
-	<div>
-		<h1>Hello!</h1>
-		<h3>We sell Websites, Web Designs, Graphics and other related services.</h3>
+	
+	<!-- Slides -->
+	<div class="slide active">
+		<div>
+			<h1>Get Built What You Want Built</h1>
+			<h3>Web Designs, Websites, SEO & Analytics, Graphics & Logos and other related services and commodities.</h3>
+		</div>
 	</div>
+	
+	<div class="slide">
+		<div>
+			<h1>Quality Commodities</h1>
+			<h3>The Best Services Available Anywhere. Web Designs, Websites, SEO & Analytics, Graphics & Logos and other related services.</h3>
+		</div>
+	</div>
+	
+	<div class="slide">
+		<div>
+			<h1>Accomplish Your Missions</h1>
+			<h3>Achieve Higher Conversion Rates, More Quality Traffic, Higher Sales Rate and Success. All at a Reasonable Price.</h3>
+		</div>
+	</div>
+	
+	<!-- Slide Controller -->
+	<div class="slide-controls">
+		<span class="active"></span>
+		<span></span>
+		<span></span>
+	</div>
+	
  </section>
  
  <!-- Features and Cost Calculator -->
@@ -96,22 +122,26 @@
 	
 	<div class="options">
 		
-		<label>Currency:</label>
-		<select ng-model="Currency">
-			<option value="usd">USD - United States</option>
-			<option value="gbp">GBP - United Kingdom</option>
-			<option value="cny">CNY - China</option>
-			<option value="aed">AED - United Arab Emirates</option>
+		<label>Category:</label>
+		<select ng-model="category">
+			<option value="simp">Simple</option>
+			<option value="com">Commercial</option>
+			<option value="entrp">Enterprise</option>
 		</select>
-		
-		<input type="checkbox" />
-		<input type="checkbox" />qwerty
-		<input type="checkbox" />qwerty
+		<div>
+			<div><input type="checkbox" />Speed Optimization</div>
+			<div><input type="checkbox" />SEO</div>
+			<div><input type="checkbox" />Analytics</div>
+			<div><input type="checkbox" />SSL/TLS</div>
+			<div><input type="checkbox" />e-commerce</div>
+			<div><input type="checkbox" />Domain and Hosting</div>
+			<div><input type="checkbox" />Brand Logo</div>
+		</div>
 		
 	</div
 	
 	><div class="result">
-		<h3>{{ 23 | currency: Currency }}</h3>
+		<h3>{{ 23 | currency }}</h3>
 	</div>
 	
  </section-->
@@ -122,11 +152,12 @@
 		<div class="pricing__item">
 			<h3 class="pricing__title">Simple</h3>
 			<p class="pricing__sentence">For people who are starting out in the water saving business</p>
-			<div class="pricing__price"><span class="pricing__currency">$</span>19<span class="pricing__period">/ month</span></div>
+			<div class="pricing__price"><span class="pricing__currency">$</span>70<span class="pricing__period">/ month</span></div>
 			<ul class="pricing__feature-list">
 				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Responsive Design</li>
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Free access to forums</li>
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Beginners tips</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Analytics</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>SEO</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Animations and Videos</li>
 			</ul>
 			<button class="pricing__action">Choose plan</button>
 		</div>
@@ -134,11 +165,12 @@
 		<div class="pricing__item pricing__item--featured">
 			<h3 class="pricing__title">Modern</h3>
 			<p class="pricing__sentence">For experienced water savers who'd like to push their limits</p>
-			<div class="pricing__price"><span class="pricing__currency">$</span>29<span class="pricing__period">/ month</span></div>
+			<div class="pricing__price"><span class="pricing__currency">$</span>200<span class="pricing__period">/ month</span></div>
 			<ul class="pricing__feature-list">
 				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Customer Reviews</li>
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Animations, Slideshows, Videos and More...</li>
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Advanced saving tips</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Prioritized Navigatoin</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>SEO & Analytics</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>e-commerce</li>
 			</ul>
 			<button class="pricing__action">Choose plan</button>
 		</div>
@@ -146,11 +178,12 @@
 		<div class="pricing__item">
 			<h3 class="pricing__title">Advanced</h3>
 			<p class="pricing__sentence">For all the professionals who'd like to educate others, too</p>
-			<div class="pricing__price"><span class="pricing__currency">$</span>79<span class="pricing__period">/ month</span></div>
+			<div class="pricing__price"><span class="pricing__currency">$</span>500<span class="pricing__period">/ month</span></div>
 			<ul class="pricing__feature-list">
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Access to all books</li>
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Unlimited board topics</li>
-				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Beginners tips</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Personalized User Experience</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Big Data</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Variety of Layouts</li>
+				<li class="pricing__feature"><i class="fa fa-long-arrow-right"></i>Advanced CTA</li>
 			</ul>
 			<button class="pricing__action">Choose plan</button>
 		</div>
@@ -191,6 +224,7 @@
   
   <script src="../resources/scripts/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
   <script src="../resources/scripts/jquery-ui.min.js"></script>
   <script src="../resources/scripts/script.js"></script>
   

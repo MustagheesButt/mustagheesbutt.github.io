@@ -28,10 +28,13 @@
 	
 	/* BLOG STYLES */
 	.blog main {
-		padding: 0;
+		padding: 1px 0 0;
+	}
+	.blog main section {
+		width: 100%;
 	}
 	.sidebar {
-		width: 20%;
+		display: none;
 	}
 }
 
@@ -61,6 +64,24 @@
 	}
 	.soc {
 		padding: 20px 9%;
+	}
+	
+	/* BLOG STYLES */
+	.blog main {
+		padding: 0;
+	}
+	.blog main .blognav div {
+		display: block;
+		text-align: center;
+	}
+	.blog main .blognav div:last-child {
+		float: none;
+	}
+	.blog main .blognav div:last-child input {
+		text-align: center;
+	}
+	.blog main .blognav, .blog main .post, .blog main .sidebar {
+		margin: 0 0 10px;
 	}
 }
 
@@ -94,21 +115,12 @@
 		height: auto;
 		display: block;
 		margin: 5% auto;
-		/* PADDING-TOP to be same as width, so its a perfect responsive circle. EDIT: made it 5%+ cause it looks a little nicer. */
+		/* PADDING-TOP to be same as width, so its a perfect responsive circle. */
 		padding-top: 60%;
 		border-radius: 50%;
 	}
 	header .description span {
 		font-size: 16px;
 		color: #E2E2E2;
-	}
-	
-	/* BLOG STYLES */
-	.blog main section {
-		float: none;
-		width: 100%;
-	}
-	.sidebar {
-		display: none;
 	}
 }

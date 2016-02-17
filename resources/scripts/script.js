@@ -138,6 +138,34 @@ $(document).ready(function () {
 		}
 	});
 	
+	/**
+	 ** PACKAGES - PAGE
+	 **/
+
+	// Slider
+	var slideControls = $("section.marketing div.slide-controls span"),
+		   slides = $("section.marketing .slide"),
+		   scaleDown = 0.85,
+		   animSpeed = 0.75;
+	
+	TweenMax.to("section.marketing .slide:not(.active)", 0, {display: "none", left: 1500, scale: scaleDown});
+
+	slideControls.click(function () {
+		slideControls.removeClass("active");
+		$(this).addClass("active");
+		
+		nthSlide = slideControls.index( $(this) );
+		// animate the current active slide to go out
+		TweenMax.to("section.marketing .slide.active", animSpeed, {scale: scaleDown});
+		TweenMax.to("section.marketing .slide.active", animSpeed, {display: "none", left: 1500, delay: animSpeed});
+		
+		slides.removeClass("active");
+		$(slides[nthSlide]).addClass("active");
+		// animate current slide to come in
+		TweenMax.to("section.marketing .slide.active", animSpeed, {display: "block", left: 0});
+		TweenMax.to("section.marketing .slide.active", animSpeed, {scale: 1, delay: animSpeed});
+	});
+	
 });
 
 function isValid(type) {
