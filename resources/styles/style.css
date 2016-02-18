@@ -500,6 +500,7 @@ section.marketing h1 {
 section.marketing h3 {
 	color: #ffffff;
 	font-weight: 100;
+	font-style: italic;
 }
 section.features .options, section.features .result {
 	display: inline-block;

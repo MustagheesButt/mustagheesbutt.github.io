@@ -83,6 +83,15 @@
 	.blog main .blognav, .blog main .post, .blog main .sidebar {
 		margin: 0 0 10px;
 	}
+	
+	/* PRICING STYLES */
+	section.marketing div.slide > div {
+		width: 100%;
+		padding: 2em 0 0 1em;
+	}
+	section.marketing h1 {
+		font-size: 48px;
+	}
 }
 
 @media (max-width: 320px) {
