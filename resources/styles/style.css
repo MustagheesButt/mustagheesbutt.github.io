@@ -65,10 +65,7 @@ nav .nav-left, nav .nav-middle, nav .nav-right {
 }
 nav .nav-left .logo {
 	font-weight: 100;
-	color: #B30652;
-}
-nav .nav-left .logo span {
-	font-family: Myriad Pro;
+	color: #FF147B;
 }
 nav .nav-right {
 	font-size: 20px;
@@ -111,22 +108,23 @@ header {
 }
 header .description {
 	width: 55%;
-	font-size: 42px;
-	font-weight: 300;
-	margin-top: 20%;
+	margin-top: 10%;
 	margin-left: 7%;
+	font-size: 32px;
 }
-header .description .responsive-image {
-	display: none;
+header .description h1 {
+	margin: 5% 0;
+	font-weight: 300;
 }
-header .description span {
+header .description h2 {
 	display: block;
 	font-size: 24px;
+	font-weight: 300;
 	color: #2F2F2F;
 }
 header .scroll-down {
 	position: absolute;
-    bottom: 8%;
+    bottom: 15%;
     left: 0;
     right: 0;
 	text-align: center;
@@ -142,6 +140,7 @@ header .description-404 {
 }
 header .links-404 ul {
 	list-style-type: none;
+	padding: 0;
 }
 header .links-404 ul li {
 	display: inline;
@@ -222,12 +221,7 @@ div.view span:hover {
 .view-graph {
 	display: none;
 }
-.view-graph .graph {
-	text-align: center;
-}
-.view-graph .graph svg {
-	width: 100% !important;
-}
+
 #portfolio main .item {
 	width: 32%;
 	height: 100%;
