@@ -22,9 +22,6 @@
 		margin-top: 10%;
 		font-size: 28px;
 	}
-	header .description span {
-		font-size: 18px;
-	}
 	
 	/* BLOG STYLES */
 	.blog main {
@@ -43,8 +40,8 @@
 		margin-top: 10%;
 		font-size: 24px;
 	}
-	header .description span {
-		font-size: 14px;
+	header .scroll-down {
+		display: none;
 	}
 	#portfolio main .item {
 		width: 100%;
@@ -104,10 +101,9 @@
 	}
 	header {
 		background-image: url("../images/cover-small.jpg");
-		color: #FFFFFF;
 	}
 	header .description {
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.6);
 		width: 100%;
 		height: 100%;
 		margin-top: 0;
@@ -116,12 +112,11 @@
 		font-size: 32px;
 		text-align: center;
 	}
-	header .description h1 {
+	header .description h1, header .description h2 {
 		margin: 5%;
+		color: #FFFFFF;
 	}
-	header .description span {
-		font-size: 18px;
-		color: #E2E2E2;
-		margin: 3%;
+	header .description h2 {
+		font-style: italic;
 	}
 }
