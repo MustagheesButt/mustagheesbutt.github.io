@@ -62,6 +62,7 @@ nav {
 nav .nav-left, nav .nav-middle, nav .nav-right {
 	display: inline-block;
 	width: 33%;
+	text-align: center;
 }
 nav .nav-left .logo {
 	font-weight: 100;
