@@ -9,7 +9,7 @@ function drawChart() {
 	var dataSkills = google.visualization.arrayToDataTable([
 		['Skill', 'Index'],
 		['Web Designing', 86], 
-		['Web Development / Web Programming', 92] ,
+		['Web Development / Web Programming', 92],
 		['Graphic Designing / Logo Designing', 65],
 		['Writing', 90],
 		['Programming', 70],
@@ -17,12 +17,12 @@ function drawChart() {
 	]);
 	var dataKnows = google.visualization.arrayToDataTable([
 		['Knows', 'Index'],
-		['PHP', 75], 
+		['PHP', 79], 
 		['SQL', 59],
 		['HTML 5', 90],
 		['CSS 3', 93],
-		['JavaScript', 80],
-		['C', 75]
+		['JavaScript', 83],
+		['C', 73]
 	]);
 	var dataEnvs = google.visualization.arrayToDataTable([
 		['Environment', 'Index'],
@@ -33,7 +33,7 @@ function drawChart() {
 	]);
 	var dataTools = google.visualization.arrayToDataTable([
 		['Tool', 'Index'],
-		['Adobe Photoshop', 65], 
+		['Adobe Photoshop', 73], 
 		['Adobe Illustrator', 30],
 		['Adobe Fireworks', 50],
 		['AutoDesk Maya', 40],
@@ -41,22 +41,19 @@ function drawChart() {
 	]);
 
 	var options = {
-	  width: "100%",
-	  height: "100%",
-	  chartArea: {
-            left: "3%",
-            top: "3%",
-            height: "94%",
-            width: "94%"
-        }
+		width: "100%",
+		height: "100%",
+		legend: "none",
+		colors: ['rgb(179, 6, 82)'],
+		vAxis: {minValue: 0}
 	};
 	
 	var charts = document.getElementsByClassName("graph");
 	
-	var chart1 = new google.visualization.PieChart(charts[0]);
-	var chart2 = new google.visualization.PieChart(charts[1]);
-	var chart3 = new google.visualization.PieChart(charts[2]);
-	var chart4 = new google.visualization.PieChart(charts[3]);
+	var chart1 = new google.visualization.ColumnChart(charts[0]);
+	var chart2 = new google.visualization.ColumnChart(charts[1]);
+	var chart3 = new google.visualization.ColumnChart(charts[2]);
+	var chart4 = new google.visualization.ColumnChart(charts[3]);
 
 	chart1.draw(dataSkills, options);
 	chart2.draw(dataKnows, options);
