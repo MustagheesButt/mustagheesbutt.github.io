@@ -1,5 +1,13 @@
 [
 {
+	"title": "NotesNetwork",
+	"thumbnail": "./resources/images/portfolio/nn.jpg",
+	"type": "Web Application/Website",
+	"category": "dev",
+	"description": "A personal project of mine, aimed to provide students access to notes, past papers and other educational material including real-time test preparation applications.",
+	"link": "http://www.notesnetwork.org"
+},
+{
 	"title": "Hubover",
 	"thumbnail": "./resources/images/portfolio/hubover.jpg",
 	"type": "blog",
@@ -24,11 +32,11 @@
 	"link": "https://www.behance.net/gallery/27852527/Logo-for-Hassans-Photography"
 },
 {
-	"title": "Fox with Kit",
-	"thumbnail": "./resources/images/portfolio/fox-moon.jpg",
+	"title": "Gothic",
+	"thumbnail": "./resources/images/portfolio/goth.jpg",
 	"type": "image manipulation",
 	"category": "des",
-	"description": "A Photoshop manipulation, featuring a fox with her kit and a majestic moon in the background.",
-	"link": "https://www.behance.net/gallery/24274701/Mother-fox-with-her-Kit"
+	"description": "A Photoshop manipulation, featuring a gothic building(GCU, Lahore) and a surreal moon in background.",
+	"link": "https://www.behance.net/gallery/37596881/GCU-Lahore"
 }
 ]

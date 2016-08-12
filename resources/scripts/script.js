@@ -72,11 +72,11 @@ $(document).ready(function () {
 				if (element.category == "dev") {
 					dev.append("<div class='item'><div onclick='' class='item-thumb' style='background-image: url(" + element.thumbnail + 
 					"); '><div class='details'><div>SEE DETAILS</div></div></div><h3><span class='title'>" + element.title + 
-					"</span><a href=' " + element.link + " '><span class='fa fa-link'></span></a></h3></div>");
+					"</span><a href=' " + element.link + " ' target='_blank'><span class='fa fa-link'></span></a></h3></div>");
 				} else if (element.category == "des") {
 					des.append("<div class='item'><div onclick='' class='item-thumb' style='background-image: url(" + element.thumbnail + 
 					"); '><div class='details'><div>SEE DETAILS</div></div></div><h3><span class='title'>" + element.title + 
-					"</span><a href=' " + element.link + " '><span class='fa fa-link'></span></a></h3></div>");
+					"</span><a href=' " + element.link + " ' target='_blank'><span class='fa fa-link'></span></a></h3></div>");
 				}
 			});
 			
