@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Mustaghees | Web Designer & Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The official website of Web Designer and Developer, Mustaghees Butt. From Frontend to Backend development, all services are available." />
+  <meta name="author" content="Mustaghees Butt" />
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="resources/images/favicon.png">
+  
+  <style>
+	/*
+	 * PRELOADER
+	 */
+	#preloader {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+	}
+	#preloader .spinner {
+		width: 25vw;
+		height: 25vw;
+		border: 10px solid transparent;
+		border-top-color: rgb(179, 6, 82);
+		border-radius: 50%;
+		position: absolute;
+		top: 30%;
+		left: 35%;
+
+		-webkit-animation: rotate 1s infinite linear;
+		animation: rotate 1s infinite linear;
+	}
+	@keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(360deg);}
+	}
+	@-webkit-keyframes rotate {
+		0% {-webkit-transform: rotate(0deg);}
+		100% {-webkit-transform: rotate(360deg);}
+	}
+  </style>
+	
+	<!-- GOOGLE ANALYTICS TRACKING | Placed here as a requirement (for verification) for Search Console/Webmaster Tools -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-54774200-2', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+	
+ </head>
+ 
+ <body>
+ 
+ <!-- PRELOADER - Handles Flash Of Unstyled Content (FOUC) issue -->
+ <div id="preloader">
+	<div class="spinner"></div>
+ </div>
+ 
+ <!-- NavBar -->
+ <nav>
+
+	<div class="nav-left">
+		<a href="http://mustagheesbutt.github.io">
+			<h1 class="logo">Mustaghees</h1>
+		</a>
+	</div>
+
+	<div class="nav-middle">
+		<ul>
+			<a href="./index.html"><li>Home</li></a>
+			<a href="./blog/index.html"><li>Blog</li></a>
+			<a href="./details/details.html"><li>CV</li></a>
+		</ul>
+	</div>
+
+	<div class="nav-right">
+		<ul>
+			<li><a target="_blank" href="https://twitter.com/MustagheesButt"><i class="fa fa-twitter"></i></a></li>
+			<li><a target="_blank" href="https://plus.google.com/104400783426208094984/posts"><i class="fa fa-google-plus"></i></a></li>
+			<li><a target="_blank" href="https://www.linkedin.com/pub/mustaghees-butt/b3/936/973"><i class="fa fa-linkedin"></i></a></li>
+		</ul>
+	</div>
+
+ </nav>
+ 
+  <!-- Header -->
+  <header>
+   <div class="description">
+    <h1>Web Designer & Developer</h1>
+	<h2>Author & Translator. Graphic & Logo Designer.</h2>
+   </div>
+   
+   <div class="scroll-down">SCROLL DOWN</br><span class="fa fa-angle-down"></span></div>
+  </header>
+  
+  <main>
+  <!--  About -->
+  <div id="about">
+   <h1><span class="fa fa-angle-right"></span>About</h1>
+   <main>
+    <section class="intro">
+     <h2>Intro:</h2>
+	 <blockquote>
+	  <p>Hi! I'm <em>Mustaghees</em> and I am a Full Stack Web Designer & Developer. I am also the author of several articles and tutorials at Sitepoint. <a href="details/details.html">Learn more</a> about me.</p>
+	 </blockquote>
+    </section>
+    
+	<!--  VIEW CONTROLLER -->
+	<div class="view">
+	 Select View: 
+	 <div>
+	  <span class="active">Table <span class="fa fa-table"></span></span
+	  ><span><span class="fa fa-pie-chart"></span> Graph</span>
+	 </div>
+	</div>
+	
+	<!-- TABLE VIEW STARTS HERE -->
+	<div class="view-table">
+     <section>
+      <h2>Skills:</h2>
+	  <table>
+	   
+	   <thead>
+	    <tr><th>Skill</th><th>Rookie</th><th>Veteran</th><th>Expert</th></tr>
+	   </thead>
+	   
+	   <tbody>
+	    <tr>
+	     <td>Web Designing</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>Web Development / Web Programming</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>Graphic Designing / Logo Designing</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+		<tr>
+	      <td>Content Writing</td>
+	      <td class="block-false"></td>
+	      <td class="block-false"></td>
+		  <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>Programming</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	     </tr>
+	     <tr>
+	      <td>Networking</td>
+	      <td class="block-false"></td>
+	      <td class="block-true"></td>
+	      <td class="block-false"></td>
+	     </tr>
+	    </tbody>
+	   </table>
+      </section>
+      
+      <section>
+       <h2>Knows:</h2>
+	   <table>
+	    
+	    <thead>
+	     <tr><th>Language</th><th>Frameworks / Libraries</th><th>Rookie</th><th>Veteran</th><th>Expert</th></tr>
+	    </thead>
+	   
+	   <tbody>
+	    <tr>
+	     <td>PHP</td>
+	     <td>WordPress</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	    <tr>
+	     <td>SQL</td>
+	     <td></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	    <tr>
+	     <td>HTML 5</td>
+	     <td></td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>CSS 3</td>
+	     <td>Sass/Bootstrap / YUI / Pure / Semantic UI</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>JavaScript</td>
+	     <td>jQuery / AngularJS / NodeJS / ProcessingJS</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>C</td>
+	     <td>SPL</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	   </tbody>
+	  </table>
+     </section>
+     
+     <section>
+      <h2>Environments (IDEs):</h2>
+	  <table>
+	   
+	   <thead>
+	    <tr><th>Environment / IDE</th><th>Rookie</th><th>Veteran</th><th>Expert</th></tr>
+	   </thead>
+	   
+	   <tbody>
+	    <tr>
+	     <td>Adobe Dreamweaver</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>SublimeText</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>Notepad++</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	    <tr>
+	     <td>Cloud9 (Online IDE)</td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	    </tr>
+	   </tbody>
+	  </table>
+     </section>
+     
+     <section>
+      <h2>Tools:</h2>
+	  <table>
+	   
+	   <thead>
+	    <tr><th>Tool</th><th>Rookie</th><th>Veteran</th><th>Expert</th></tr>
+	   </thead>
+	   
+	   <tbody>
+	    <tr>
+	     <td>Adobe Photoshop</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	    <tr>
+	     <td>Adobe Illustrator</td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	    <tr>
+	     <td>Adobe Fireworks</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	    <tr>
+	     <td>AutoDesk Maya</td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	    <tr>
+	     <td>Git / GitHub / GitLab (Control Version System)</td>
+	     <td class="block-false"></td>
+	     <td class="block-true"></td>
+	     <td class="block-false"></td>
+	    </tr>
+	   </tbody>
+	  </table>
+     </section>
+	
+	</div>
+	<!-- TABLE VIEW ENDS HERE -->
+	
+	<!-- GRAPH VIEW STARTS HERE -->
+	<div class="view-graph">
+	 <section>
+	  <h2>Skills:</h2>
+	  <div class="graph" style="height: 300px"></div>
+	 </section>
+	 
+	 <section>
+	  <h2>Knows:</h2>
+	  <div class="graph" style="height: 300px"></div>
+	 </section>
+	 
+	 <section>
+	  <h2>Environments (IDEs):</h2>
+	  <div class="graph" style="height: 300px"></div>
+	 </section>
+	 
+	 <section>
+	  <h2>Tools:</h2>
+	  <div class="graph" style="height: 300px"></div>
+	 </section>
+	</div>
+	<!-- GRAPH VIEW ENDS HERE -->
+	
+   </main>
+  </div>
+  
+  <!-- Portfolio -->
+  <div id="portfolio">
+   <h1><span class="fa fa-angle-right"></span>Portfolio</h1>
+   <main>
+    <div class="development">
+		<h2>Development</h2>
+	</div>
+	<div class="design">
+		<h2>Design</h2>
+	</div>
+	
+	<!-- DETAILS BOX -->
+	<div class="details-box">
+	 <div>
+		<div>
+			<h3 class="details-box-title">Title: <span></span></h3>
+			<h4 class="details-box-type">Type: <span></span></h4>
+			<h4>Description:</h4>
+			<p class="details-box-description"></p>
+		</div>
+		<img src alt="thumbnail" />
+		<span class="close">X - CLOSE</span>
+	 </div>
+	</div>
+	
+   </main>
+  </div>
+  
+  <!-- Contact -->
+  <div id="contact">
+   
+   <h1><span class="fa fa-angle-right"></span>Contact</h1>
+   <main>
+   <blockquote>Wanna hire me? Contact me using the form below. Or check out other links to professional sites and social accounts below the contact form. You can use them to contact me.</blockquote>
+	<h3>E-mail Me Now:</h3>
+	
+	<form name="contact">
+		<input type="text" name="name" placeholder="Name" /></br></br>
+		<input type="email" name="email" placeholder="Your email address" /></br></br>
+		<input type="text" name="_subject" placeholder="Subject" /></br></br>
+		<input type="text" name="_gotcha" style="display:none" /><!-- to avoid spam -->
+		
+		<textarea placeholder="Your email body here..."></textarea></br></br>
+		
+		<button type="submit">Send</button>
+	</form>
+   
+   </main>
+  </div>
+  </main>
+  
+ <!-- FOOTER -->
+ <footer>
+	<div class="links">
+		<ul>
+		 <li><a target="_blank" href="https://www.upwork.com/freelancers/~01cd4cdc2a87c4ae22">Upwork</a></li>
+		 <li><a target="_blank" href="https://www.freelancer.com/u/MustagheesButt.html">Freelancer</a></li>
+		 <li><a target="_blank" href="https://www.fiverr.com/users/mustaghees">Fiverr</a></li>
+		 <li><a target="_blank" href="https://twitter.com/MustagheesButt">Twitter</a></li>
+		 <li><a target="_blank" href="https://plus.google.com/104400783426208094984/posts">Google+</a></li>
+		 <li><a target="_blank" href="https://www.linkedin.com/pub/mustaghees-butt/b3/936/973">LinkedIn</a></li>
+		</ul>
+	</div>
+	<p>&copy; Copyright Mustaghees Butt, 2015 - 2016. All rights reserved.</p>
+ </footer>
+  
+  <!-- CSS AND JS WERE MOVED HERE FOR SPEED OPTIMIZATION -->
+  <link type="text/css" rel="stylesheet" href="resources/styles/style.css" />
+  <link type="text/css" rel="stylesheet" href="resources/styles/responsive.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <script src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="resources/scripts/jquery-ui.min.js"></script>
+  <script src="resources/scripts/script.js"></script>
+  <script src="resources/scripts/graph.js"></script>
+  
+ </body>
+ 
+</html>

@@ -1,0 +1,129 @@
+<div id="progress"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+<script>
+var vertices = [];
+var order = [0, 1, 2, 3, 4, 5, 6];
+var shortestDistance = 0;
+var shortestCombo;
+
+/* HUD View */
+var totalPermutations;
+var counter = 0;
+var percentage;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  /* initialize vertices */
+  for (var i = 0; i < order.length; i++) {
+    vertices[i] = createVector(random(400), random(400));
+  }
+  
+  shortestDistance = calcDistance(vertices);
+  shortestCombo = order.slice(); // slice returns a "shallow" copy
+  
+  totalPermutations = factorial(vertices.length);
+}
+
+function draw() {
+  background(10);
+  document.querySelector("#progress").innerHTML = nf(100 * (counter/totalPermutations),0, 4) + "%";
+  
+  /* draw vertices */
+  stroke(255);
+  strokeWeight(1);
+  
+  beginShape(); // edges bw vertices
+  for (var i = 0; i < vertices.length; i++) {
+    fill(255);
+    ellipse(vertices[i].x, vertices[i].y, 5, 5);
+    
+    noFill();
+    vertex(vertices[order[i]].x, vertices[order[i]].y);
+  }
+  endShape();
+  
+  /* draw shortestCombo */
+  stroke(15, 200, 30);
+  strokeWeight(2);
+  
+  beginShape(); // edges bw vertices
+  for (var i = 0; i < vertices.length; i++) {
+    noFill();
+    vertex(vertices[shortestCombo[i]].x, vertices[shortestCombo[i]].y);
+  }
+  endShape();
+  
+  /* shuffle vertices */
+  order = nextOrder(order); // mutates `order` to next lexicographic order
+  if (order == -1) {
+    noLoop();
+    return;
+  }
+  
+  var distance = calcDistance(vertices);
+  if (distance < shortestDistance) {
+    shortestDistance = distance;
+    shortestCombo = order.slice();
+    console.log(shortestDistance);
+  }
+  
+  counter++;
+}
+
+function swap(arr, i, j) {
+  var temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+function calcDistance(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length - 1; i++) {
+    var vertex1 = arr[order[i]];
+    var vertex2 = arr[order[i + 1]];
+    sum += dist(vertex1.x, vertex1.y, vertex2.x, vertex2.y);
+  }
+  
+  return sum;
+}
+
+function nextOrder(order) {
+  /* 1. FINDING greatest X */
+  var greatestX = -1;
+  for (var i = 0; i < order.length - 1; i++) {
+    if (order[i] < order[i + 1]) {
+      greatestX = i;
+    }
+  }
+  // 1.5. No X, such that X < X+1
+  if (greatestX == -1) {
+    console.log("finished!");
+    return -1;
+  }
+  
+  /* 2. FINDING largest Y */
+  var greatestY = -1;
+  for (var i = 0; i < order.length; i++) {
+    if (order[greatestX] < order[i]) {
+      greatestY = i;
+    }
+  }
+  
+  /* 3. swap gX and gY */
+  swap(order, greatestX, greatestY);
+  
+  /* 4. Reverse from X+1 to n */
+  var reversed = order.splice(greatestX + 1).reverse();
+  order = order.concat(reversed);
+  return order;
+}
+
+function factorial(n) {
+  if (n == 1)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}
+</script>

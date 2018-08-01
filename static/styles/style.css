@@ -1,0 +1,307 @@
+body {
+	margin: 0;
+	font-family: Roboto, Helvetica;
+}
+
+input, textarea {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid black;
+	font-family: Roboto;
+	font-size: 16px;
+	padding: 1%;
+}
+
+h1, h2 {
+	font-weight: 400;
+	margin: 0 0;
+}
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+p, ul, ol {
+	font-size: 24px;
+	font-weight: 200;
+}
+
+ul > li > a, ol > li > a {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+    color: #789FBB;
+	transition: 0.2s;
+}
+
+a:hover {
+	color: brown;
+}
+
+blockquote.quote {
+	font-size: 24px;
+}
+
+/*  CUSTOM COMPONENTS */
+nav {
+	padding: 0 1%;
+}
+nav .nav-left, nav .nav-middle, nav .nav-right {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+nav .nav-left .logo {
+	font-weight: 100;
+	color: #FF147B;
+}
+nav .nav-right {
+	font-size: 20px;
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+nav ul li {
+	display: inline;
+	margin-right: 5%;
+}
+
+footer div.links {
+	text-align: center;
+}
+footer div.links ul {
+	list-style: none;
+	padding: 0;
+}
+footer div.links ul li {
+	display: inline-block;
+	width: 33%;
+	margin-bottom: 2%;
+}
+footer p {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.container {
+	padding: 5%;
+}
+
+.container.alice-blue {
+	background-color: aliceblue;
+}
+
+.center {
+	text-align: center;
+}
+
+header > .mobile > .picture {
+	background-image: url("../images/profile_pic.jpg");
+	background-size: cover;
+	background-position: center center;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+header .mini-about {
+	margin: 5% 0 0 0;
+	text-align: center;
+}
+header .mini-about .description {
+	font-style: italic;
+}
+header .description-404 {
+	margin-top: 5%;
+	margin-left: 7%;
+	width: 55%;
+	color: #2F2F2F;
+	font-weight: 300;
+	font-size: 18px;
+}
+header .links-404 ul {
+	list-style-type: none;
+	padding: 0;
+}
+header .links-404 ul li {
+	display: inline;
+	padding: 0 5%;
+	font-size: 20px;
+}
+header .links-404 ul li:hover {
+	text-decoration: underline;
+}
+header .links-404 ul li a {
+	color: brown;
+}
+
+body > main > div {
+	padding: 5px;
+}
+body > main > div > h1 {
+	border-bottom: 2px solid black;
+	transition: 0.5s;
+}
+body > main > div > h1:hover, body > main > div.active > h1 {
+	color: rgb(179, 6, 82);
+	border-bottom: 2px solid rgb(179, 6, 82);
+}
+
+#portfolio .box {
+	background-size: cover;
+}
+
+#portfolio .box > .details {
+	min-height: 300px;
+	padding: 12px;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 0.4;
+	transition: 0.5s;
+}
+
+#portfolio .box:hover > .details {
+	opacity: 1;
+}
+
+#contact form {
+	text-align: center;
+}
+#contact form input, textarea {
+	width: 80%;
+	transition: 0.5s;
+}
+#contact form input.wrong {
+	background-color: #FFBABA;
+}
+#contact textarea {
+	height: 150px;
+	resize: none;
+	border: none;
+	border-bottom: 2px solid black;
+}
+#contact form input:focus, #contact textarea:focus {
+	border-bottom: 2px solid brown;
+	outline: none;
+}
+#contact form button {
+	font-size: 16px;
+	font-weight: 600;
+    border: 2px solid transparent;
+    background: none;
+	color: #B30652;
+	padding: 0.4%;
+    text-transform: uppercase;
+	transition: 0.5s;
+}
+#contact form button:hover {
+	background-color: #B30652;
+	color: #FFFFFF;
+}
+#contact .prof-icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+/*
+ * SOCIAL ICONS - CSS
+ */
+.fa.fa-twitter {
+	color: #55acee;
+}
+.fa.fa-google-plus {
+	color: #db4437;
+}
+.fa.fa-linkedin {
+	color: #9e9e9e;
+}
+
+@media (max-width: 600px) {
+  body {
+    
+  }
+}
+
+/**
+  * BLOG STYLES
+  **/
+
+.blog header {
+	background-image: url("../images/blog-header-bg.png");
+	font-weight: 100;
+	font-size: 48px;
+	text-align: center;
+	color: rgb(179, 6, 82);
+	height: 260px;
+}
+.blog main {
+	background-image: url("../images/texture.jpg");
+	padding: 2%;
+}
+.blog main .blognav, .blog main .post, .blog main .sidebar {
+	background-color: aliceblue;
+	margin: 10px 5px;
+	padding: 15px;
+}
+.blog main .blognav div {
+	display: inline-block;
+}
+.blog main .blognav div:first-child a {
+	margin-right: 10px;
+}
+.blog main .blognav div:last-child {
+	float: right;
+}
+.blog main section {
+	float: left;
+	width: 70%;
+}
+.blog main .post {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+}
+.blog main .post.full {
+	height: 100%;
+	padding: 10px;
+}
+.blog main .post h2 small {
+	color: rgb(147, 147, 147);
+	float: right;
+	padding-top: 5px;
+}
+.blog main .post .post-body {
+	padding: 10px;
+}
+.blog main .post img {
+	width: 95%;
+}
+.blog main .post .more {
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	padding: 3% 0;
+}
+.sidebar {
+	float: right;
+	width: 23%;
+}
+/* FLOAT FIXES */
+.blog main:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
