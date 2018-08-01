@@ -240,7 +240,9 @@ body > main > div > h1:hover, body > main > div.active > h1 {
 	font-size: 48px;
 	text-align: center;
 	color: rgb(179, 6, 82);
-	height: 260px;
+}
+.blog header > div {
+	padding: 5% 0;
 }
 .blog main {
 	background-image: url("../images/texture.jpg");
@@ -304,4 +306,35 @@ body > main > div > h1:hover, body > main > div.active > h1 {
 	content: " ";
 	clear: both;
 	height: 0;
+}
+
+@media (max-width: 640px) {
+	.blog main {
+		padding: 1px 0 0;
+	}
+	.blog main section {
+		width: 100%;
+	}
+	.sidebar {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.blog main {
+		padding: 0;
+	}
+	.blog main .blognav div {
+		display: block;
+		text-align: center;
+	}
+	.blog main .blognav div:last-child {
+		float: none;
+	}
+	.blog main .blognav div:last-child input {
+		text-align: center;
+	}
+	.blog main .blognav, .blog main .post, .blog main .sidebar {
+		margin: 0 0 10px;
+	}
 }
