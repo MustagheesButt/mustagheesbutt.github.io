@@ -1,175 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-  <title>Mustaghees | Web Designer & Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The official website of Web Designer and Developer, Mustaghees Butt. From Frontend to Backend development, all services are available." />
-  <meta name="author" content="Mustaghees Butt" />
-  
-  <link rel="icon" 
-      type="image/png" 
-      href="static/images/favicon.png">
-	
-	<!-- GOOGLE ANALYTICS TRACKING | Placed here as a requirement (for verification) for Search Console/Webmaster Tools -->
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<html>
 
-	ga('create', 'UA-54774200-2', 'auto');
-	ga('send', 'pageview');
-	</script>	
- </head>
- 
- <body>
-	<!-- NavBar -->
-	<nav>
-		<div class="nav-left">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="index.html#portfolio">Portfolio</a></li>
-				<li><a href="index.html#contact">Contact</a></li>
-			</ul>
-		</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustaghees Butt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      user-select: none;
+    }
 
-		<div class="nav-middle">
-			<ul>
-				<li><a href="./blog/index.html">Blog</a></li>
-				<li><a href="./details/details.html">CV</a></li>
-			</ul>
-		</div>
+    html,
+    body {
+      font-family: 'Open Sans';
+    }
 
-		<div class="nav-right">
-			<ul>
-				<li><a target="_blank" href="https://twitter.com/MustagheesButt"><i class="fa fa-twitter"></i></a></li>
-				<li><a target="_blank" href="https://plus.google.com/104400783426208094984/posts"><i class="fa fa-google-plus"></i></a></li>
-				<li><a target="_blank" href="https://linkedin.com/in/mustaghees-butt-973936b3"><i class="fa fa-linkedin"></i></a></li>
-			</ul>
-		</div>
-	</nav>
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
 
-	<!-- Header -->
-	<header class="container alice-blue">
-		<div class="mobile">
-			<div class="picture"></div>
-			
-			<div class="mini-about">
-				<h1>Mustaghees Butt</h1>
-				<p class="description">Full Stack Web Designer & Developer, Software Developer, Artist and an Author.</p>
-				<!-- OLD p>Hi! I'm <em>Mustaghees</em>, a Full Stack Web Designer & Developer. I am also the author of several articles and tutorials at Sitepoint. <a href="details/details.html">Learn more</a> about me.</p -->
-			</div>
-		</div>
+    #overlay {
+      margin: auto;
+      background-color: rgba(240, 248, 255, 0.2);
+      backdrop-filter: blur(5px);
+    }
 
-		<div class="desktop">
-			
-		</div>
-	</header>
+    #github,
+    #linkedin {
+      color: white;
+      width: 1.25rem;
+    }
+  </style>
+  <svg aria-hidden="true" class="hidden">
+    <defs>
+      <symbol id="github" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+        <path
+          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+        </path>
+      </symbol>
+      <symbol id="linkedin" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+        <rect x="2" y="9" width="4" height="12"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+      </symbol>
+    </defs>
+  </svg>
+</head>
 
-	<!--  About -->
-	<section id="about" class="container">
-		<h1 class="center">A Little More About Me</h1>
+<body>
 
-		<h2>Areas of Interest</h2>
-		<p>The Incompleteness Theorem, Graph Theory, A.I. (Neural Networks, to be more precise), any cutting-edge technology, molecular biology, Arts & Animation.</p>
+  <section class="relative">
+    <div class="promo promo-close" id="apple_link"></div>
+    <div id="google_link"></div>
+    <canvas></canvas>
 
-		<h2>Books On My Shelf</h2>
-		<p>I'm mostly interested in technology, science,  and business related books including the likes of <em>The Art of Computer Programming</em>, <em>Zero to One</em> and <em>The Nature of Code</em>. To see my complete shelf, visit my <a href="https://www.goodreads.com/user/show/73443927-mustaghees" target="_blank">Goodreads profile</a>.</p>
+    <div id="overlay" class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center h-1/3 md:h-2/3 md:w-1/3 py-5 text-center text-white">
+      <h1 class="text-4xl mb-5">Mustaghees Butt</h1>
+      <h2 class="mb-5">Software Developer</h2>
+      <div class="flex justify-center mb-5">
+        <a href="https://github.com/MustagheesButt" class="mr-5" target="_blank">
+          <svg style="width: 24px; height: 24px;">
+            <use href="#github" />
+          </svg>
+        </a>
+        <a href="https://pk.linkedin.com/in/mustaghees-butt/" target="_blank">
+          <svg style="width: 24px; height: 24px;">
+            <use href="#linkedin" />
+          </svg>
+        </a>
+      </div>
 
-		<h2>Preferred Text Editors</h2>
-		<p>When coding, I mostly use Visual Studio and Sublime Text with Vim.</p>
+      <div class="mb-5">
+        <a href="assets/resume.pdf" target="_blank">Resume</a>,
+        <a href="https://www.upwork.com/freelancers/~01cd4cdc2a87c4ae22" target="_blank">Upwork</a>,
+        <a href="https://www.fiverr.com/mustaghees" target="_blank">Fiverr</a>
+      </div>
 
-		<h2>Favorite Quotes</h2>
-		<blockquote class="quote">
-			<q>In the midst of chaos, there is also opportunity</q>
-			<cite>&mdash; Sun Tzu, Art of War</cite>
-		</blockquote>
+      <div>
+        <h2>Startups</h2>
+        <a href="https://cryptowatch.pk" target="_blank">CryptoWatch</a>,
+        <a href="https://goodjoblahore.com" target="_blank">GoodJobLahore</a>,
+        <a href="assets/Analytics NotesNetwork Web Data Audience Overview 20160901-20191130.pdf" target="_blank">NotesNetwork (dead)</a>
+      </div>
+    </div>
+  </section>
 
-		<blockquote class="quote">
-			<q>True art is sublime! True art . . . IS AN EXPLOSION!</q>
-			<cite>&mdash; Deidara, Naruto Shippuden</cite>
-		</blockquote>
+  <!-- TODO: Flow Fields -->
+  <!-- <section>
+    <h2>Flow Fields</h2>
+  </section> -->
 
-	</section>
-  
-	<!-- Portfolio -->
-	<section id="portfolio" class="container alice-blue">
-		<div>
-			<h1>My Works</h1>
-			<p>Check out the stuff I've been working on . . .</p>
-		</div>
+  <script src="assets/js/dat.gui.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
 
-		<div>
-			<a href="https://notesnetwork.org" target="_blank">
-				<div class="box" style="background-image: url('static/images/portfolio/nn.png');">
-					<div class="details">
-						<h3>NotesNetwork</h3>
-						<p>A personal project of mine. Aimed at solving the problems of students in Pakistan.</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="./portfolio/travelling-salesperson-demo.html">
-				<div class="box" style="background-image: url('static/images/portfolio/travelling-sp.jpg');">
-					<div class="details">
-						<h3>Travelling Sales Person</h3>
-						<p>As part of my research on P vs NP and the complexity theory.</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="https://www.behance.net/gallery/37596881/GCU-Lahore" target="_blank">
-				<div class="box" style="background-image: url('static/images/portfolio/goth.jpg');">
-					<div class="details">
-						<h3>Gothic</h3>
-						<p>An image manipulation I did in my free time.</p>
-					</div>
-				</div>
-			</a>
-		</div>
-	</section>
-
-	<!-- Contact -->
-	<section id="contact" class="container">
-		<h1>Want To Connect?</h1>
-		<p>Contact me using the form below. Or check out other links to professional sites and social accounts below the contact form. You can use them to contact me.</p>
-
-		<form name="contact">
-			<input type="text" name="name" placeholder="Name" /></br></br>
-			<input type="email" name="email" placeholder="Your email address" /></br></br>
-			<input type="text" name="_subject" placeholder="Subject" /></br></br>
-			<input type="text" name="_gotcha" style="display:none" /><!-- to avoid spam -->
-			
-			<textarea placeholder="Your email body here..."></textarea></br></br>
-			
-			<button type="submit">Send</button>
-		</form>
-	</section>
-
-	<!-- FOOTER -->
-	<footer class="container alice-blue">
-		<div class="links">
-			<ul>
-				<li><a target="_blank" href="https://www.upwork.com/freelancers/~01cd4cdc2a87c4ae22">Upwork</a></li>
-				<li><a target="_blank" href="https://www.freelancer.com/u/MustagheesButt.html">Freelancer</a></li>
-				<li><a target="_blank" href="https://www.fiverr.com/users/mustaghees">Fiverr</a></li>
-				<li><a target="_blank" href="https://twitter.com/MustagheesButt">Twitter</a></li>
-				<li><a target="_blank" href="https://plus.google.com/104400783426208094984/posts">Google+</a></li>
-				<li><a target="_blank" href="https://linkedin.com/in/mustaghees-butt-973936b3">LinkedIn</a></li>
-			</ul>
-		</div>
-		<p>&copy; Copyright Mustaghees Butt, 2015 - 2016. All rights reserved.</p>
-	</footer>
-  
-  <!-- CSS AND JS WERE MOVED HERE FOR SPEED OPTIMIZATION -->
-  <link type="text/css" rel="stylesheet" href="static/styles/style.css" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  
-  <script src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="static/scripts/script.js"></script>
-  
- </body>
- 
 </html>
